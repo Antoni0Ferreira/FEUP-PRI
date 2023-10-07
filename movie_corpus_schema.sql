@@ -13,15 +13,15 @@ DROP TABLE IF EXISTS movie_genre;
 CREATE TABLE character (
     id         TEXT PRIMARY KEY,
     name       TEXT,
-    movie_id   TEXT REFERENCES movie (id),
+    movie_id   TEXT REFERENCES movie (id) ON DELETE CASCADE,
     gender     TEXT,
     credit_pos TEXT
 );
 CREATE TABLE conversation (
     id INTEGER PRIMARY KEY,
-    first_char_id   TEXT    REFERENCES character (id),
-    second_char_id  TEXT    REFERENCES character (id),
-    movie_id        TEXT    REFERENCES movie (id)
+    first_char_id   TEXT    REFERENCES character (id) ON DELETE CASCADE,
+    second_char_id  TEXT    REFERENCES character (id) ON DELETE CASCADE,
+    movie_id        TEXT    REFERENCES movie (id) ON DELETE CASCADE
 );
 CREATE TABLE genre (
     id   INTEGER PRIMARY KEY,
@@ -29,10 +29,10 @@ CREATE TABLE genre (
 );
 CREATE TABLE line (
     id              TEXT    PRIMARY KEY,
-    character_id    TEXT    REFERENCES character (id),
-    movie_id        TEXT    REFERENCES movie (id),
+    character_id    TEXT    REFERENCES character (id) ON DELETE CASCADE,
+    movie_id        TEXT    REFERENCES movie (id) ON DELETE CASCADE,
     line_text       TEXT,
-    conversation_id INTEGER REFERENCES conversation (first_char_id)
+    conversation_id INTEGER REFERENCES conversation (first_char_id) ON DELETE CASCADE
 );
 CREATE TABLE movie (
     id          TEXT    PRIMARY KEY,
@@ -44,7 +44,7 @@ CREATE TABLE movie (
 CREATE TABLE movie_genre (
     movie_id TEXT    REFERENCES movie (id),
     genre_id INTEGER REFERENCES genre (id),
-    CONSTRAINT movie_genre_pk PRIMARY KEY (movie_id, genre_id) ON CONFLICT REPLACE
+    CONSTRAINT movie_genre_pk PRIMARY KEY (movie_id, genre_id) ON CONFLICT REPLACE ON DELETE CASCADE
 );
 
 COMMIT TRANSACTION;
