@@ -1,0 +1,203 @@
+{
+    "add-field-type" : [
+        {
+            "name":"movieTitle",
+            "class":"solr.TextField",
+            "indexAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"}
+                ]
+            },
+            "queryAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"}
+                ]
+            }
+        },
+        {
+            "name": "movieYear",
+            "class": "solr.TrieIntField",
+            "precisionStep": 8
+        },
+        {
+            "name": "movieRating",
+            "class": "solr.TrieFloatField"
+        },
+        {
+            "name": "movieVotes",
+            "class": "solr.TrieIntField",
+            "precisionStep": 8
+        },
+        {
+            "name": "movieRuntime",
+            "class": "solr.TrieIntField",
+            "precisionStep": 8
+        },
+        {
+            "name": "movieRevenue",
+            "class": "solr.TrieIntField",
+            "precisionStep": 8
+        },
+        {
+            "name": "moviePosterURL",
+            "class": "solr.TextField"
+        },
+        {
+            "name": "movieCharacter",
+            "class": "solr.TextField",
+            "indexAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"}
+                ]
+            },
+            "queryAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"}
+                ]
+            }
+        },
+        {
+            "name": "movieGenre",
+            "class": "solr.TextField",
+            "indexAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"}
+                ]
+            },
+            "queryAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"}
+                ]
+            }
+        },
+        {
+            "name": "movieActor",
+            "class": "solr.TextField",
+            "indexAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"}
+                ]
+            },
+            "queryAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"}
+                ]
+            }
+        }
+        
+    ],
+    "add-field": [
+        {
+            "name": "title",
+            "type": "movieTitle",
+            "indexed": true,
+            "stored": true,
+            "multiValued": false,
+            "required": true
+        },
+        {
+            "name": "year",
+            "type": "movieYear",
+            "indexed": true,
+            "stored": true,
+            "multiValued": false,
+            "required": true
+        },
+        {
+            "name": "imdb_rating",
+            "type": "movieRating",
+            "indexed": true,
+            "stored": true,
+            "multiValued": false,
+            "required": false
+        },
+        {
+            "name": "imdb_votes",
+            "type": "movieVotes",
+            "indexed": true,
+            "stored": true,
+            "multiValued": false,
+            "required": false
+        },
+        {
+            "name": "runtime",
+            "type": "movieRuntime",
+            "indexed": true,
+            "stored": true,
+            "multiValued": false,
+            "required": false
+        },
+        {
+            "name": "revenue",
+            "type": "movieRevenue",
+            "indexed": true,
+            "stored": true,
+            "multiValued": false,
+            "required": false
+        },
+        {
+            "name": "poster_path",
+            "type": "moviePosterURL",
+            "indexed": false,
+            "stored": false,
+            "multiValued": false,
+            "required": false
+        },
+        {
+            "name": "characters",
+            "type": "movieCharacter",
+            "indexed": true,
+            "stored": true,
+            "multiValued": true,
+            "required": false
+        },
+        {
+            "name": "genres",
+            "type": "movieGenre",
+            "indexed": true,
+            "stored": true,
+            "multiValued": true,
+            "required": false
+        },
+        {
+            "name": "actors",
+            "type": "movieActor",
+            "indexed": true,
+            "stored": true,
+            "multiValued": true,
+            "required": false
+        }
+    ]
+}

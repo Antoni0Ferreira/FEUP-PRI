@@ -1,0 +1,105 @@
+{
+    "add-field-type" : [
+        {
+            "name": "actorName",
+            "class" : "solr.TextField",
+            "indexAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"}
+                ]
+            },
+            "queryAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"}
+                ]
+            }
+        },
+        {
+            "name": "charName",
+            "class" : "solr.TextField",
+            "indexAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"}
+                ]
+            },
+            "queryAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"}
+                ]
+            }
+        },
+        {
+            "name": "movieTitle",
+            "class": "solr.TextField",
+            "indexAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"}
+                ]
+            },
+            "queryAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"}
+                ]
+            }
+        }
+
+    ],
+    "add-field": [
+        {
+            "name": "name",
+            "type": "actorName",
+            "indexed": true,
+            "stored": true,
+            "multiValued": false,
+            "required": true
+        },
+        {
+            "name": "characters",
+            "type": "charName",
+            "multiValued": true,
+            "indexed": true,
+            "required": false,
+            "stored": true
+        },
+        {
+            "name": "movies",
+            "type": "movieTitle",
+            "multiValued": true,
+            "indexed": true,
+            "required": false,
+            "stored": true  
+        },
+        {
+            "name": "related_actors",
+            "type": "actorName",
+            "multiValued": true,
+            "indexed": true,
+            "required": false,
+            "stored": true
+        }
+    ]
+}
