@@ -34,6 +34,11 @@ curl -X POST -H 'Content-type:application/json' \
 #-----------------#
 
 docker exec moviehut_solr bin/solr create_core -c conversations
+
+curl -X POST -H 'Content-type:application/json' \
+    --data-binary "@conversation_schema.json" \
+    http://localhost:8983/solr/conversations/schema
+
 curl -X POST -H 'Content-type:application/json' \
     --data-binary "@conversations.json" \
     http://localhost:8983/solr/conversations/update?commit=true
