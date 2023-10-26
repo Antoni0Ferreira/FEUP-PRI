@@ -141,7 +141,7 @@
             "indexed": true,
             "stored": true,
             "multiValued": false,
-            "required": false
+            "required": true
         },
         {
             "name": "imdb_votes",
@@ -149,7 +149,7 @@
             "indexed": true,
             "stored": true,
             "multiValued": false,
-            "required": false
+            "required": true
         },
         {
             "name": "runtime",
@@ -157,7 +157,7 @@
             "indexed": true,
             "stored": true,
             "multiValued": false,
-            "required": false
+            "required": true
         },
         {
             "name": "revenue",
@@ -165,13 +165,13 @@
             "indexed": true,
             "stored": true,
             "multiValued": false,
-            "required": false
+            "required": true
         },
         {
             "name": "poster_path",
             "type": "moviePosterURL",
             "indexed": false,
-            "stored": false,
+            "stored": true,
             "multiValued": false,
             "required": false
         },
