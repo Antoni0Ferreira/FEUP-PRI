@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Create a container 
-# docker run --name moviehut_solr -p 8983:8983 solr:9.3
+#docker run --name moviehut_solr -p 8983:8983 solr:9.3
 
 # if core already exists, delete it
 docker exec moviehut_solr bin/solr delete -c movies
@@ -24,8 +24,10 @@ curl -X POST -H 'Content-type:application/json' \
 
 docker exec moviehut_solr bin/solr create_core -c actors
 
+docker cp namesynonyms.txt moviehut_solr:/var/solr/data/actors/namesynonyms.txt
+
 curl -X POST -H 'Content-type:application/json' \
-    --data-binary "@actors_schema.json" \
+    --data-binary "@complex_actors_schema.json" \
     http://localhost:8983/solr/actors/schema
 
 curl -X POST -H 'Content-type:application/json' \
