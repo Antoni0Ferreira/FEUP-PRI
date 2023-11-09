@@ -2,7 +2,7 @@
     {
         "id": 1,
         "type_string": "conversation",
-        "_childDocuments_": [
+        "lines": [
             {
                 "id": "L197",
                 "character": "CAMERON",

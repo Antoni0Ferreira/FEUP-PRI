@@ -1,6 +1,43 @@
 {
     "add-field-type" : [
         {
+            "name": "TextName",
+            "class": "solr.TextField",
+            "indexAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"}
+                ]
+            },
+            "queryAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"}
+                ]
+            }
+        },
+        {
+            "name": "TextTitle",
+            "class": "solr.TextField",
+            "indexAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class": "solr.EnglishMinimalStemFilterFactory"},
+                    {"class": "solr."}
+                ]
+            }
+            
+
+        }
+        {
             "name":"movieTitle",
             "class":"solr.TextField",
             "indexAnalyzer":{
