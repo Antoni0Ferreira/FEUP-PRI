@@ -1,7 +1,7 @@
 {
     "add-field-type" : [
         {
-            "name": "actorName",
+            "name": "NameTextField",
             "class" : "solr.TextField",
             "indexAnalyzer":{
                 "tokenizer":{
@@ -23,13 +23,15 @@
             }
         },
         {
-            "name": "charName",
-            "class" : "solr.TextField",
+            "name":"SynonymsNameTextField",
+            "class":"solr.TextField",
             "indexAnalyzer":{
                 "tokenizer":{
                     "class":"solr.StandardTokenizerFactory"
                 },
                 "filters":[
+                    {"class":"solr.SynonymGraphFilterFactory",  "ignoreCase":"true", "synonyms":"namesynonyms.txt", "expand":"false"},
+                    {"class":"solr.FlattenGraphFilterFactory"},
                     {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
                     {"class":"solr.LowerCaseFilterFactory"}
                 ]
@@ -41,6 +43,26 @@
                 "filters":[
                     {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
                     {"class":"solr.LowerCaseFilterFactory"}
+                ]
+            }
+        },
+        {
+            "name": "PhoneticNameTextField",
+            "class" : "solr.TextField",
+            "indexAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.BeiderMorseFilterFactory", "nameType":"GENERIC", "ruleType":"APPROX", "concat":"true", "languageSet":"auto"}
+                ]
+            },
+            "queryAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.BeiderMorseFilterFactory", "nameType":"GENERIC", "ruleType":"APPROX", "concat":"true", "languageSet":"auto"}
                 ]
             }
         },
@@ -71,15 +93,29 @@
     "add-field": [
         {
             "name": "name",
-            "type": "actorName",
+            "type": "NameTextField",
             "indexed": true,
             "stored": true,
             "multiValued": false,
             "required": true
         },
         {
+            "name": "name_synonyms",
+            "type": "SynonymsNameTextField",
+            "indexed": true,
+            "stored": false,
+            "multiValued": true
+        },
+        {
+            "name": "name_phonetic",
+            "type": "PhoneticNameTextField",
+            "indexed": true,
+            "stored": false,
+            "multiValued": false
+        },
+        {
             "name": "characters",
-            "type": "charName",
+            "type": "NameTextField",
             "multiValued": true,
             "indexed": true,
             "required": false,
@@ -95,11 +131,22 @@
         },
         {
             "name": "related_actors",
-            "type": "actorName",
+            "type": "NameTextField",
             "multiValued": true,
             "indexed": true,
             "required": false,
             "stored": true
+        }
+    ],
+
+    "add-copy-field": [
+        {
+            "source": "name",
+            "dest": "name_phonetic"
+        },
+        {
+            "source": "name",
+            "dest": "name_synonyms"
         }
     ]
 }

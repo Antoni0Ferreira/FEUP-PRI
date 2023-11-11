@@ -2,7 +2,7 @@
     "add-field-type" : [
         {
             "name": "NameTextField",
-            "class": "solr.TextField",
+            "class" : "solr.TextField",
             "indexAnalyzer":{
                 "tokenizer":{
                     "class":"solr.StandardTokenizerFactory"
@@ -74,7 +74,31 @@
                     "class":"solr.StandardTokenizerFactory"
                 },
                 "filters":[
-                    {"class": "solr.EnglishMinimalStemFilterFactory", "preserveOriginal":"true"},
+                    {"class":"solr.NGramFilterFactory", "minGramSize":3, "maxGramSize":15, "preserveOriginal":true},
+                    {"class": "solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class": "solr.LowerCaseFilterFactory"}
+                ]
+            },
+            "queryAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.NGramFilterFactory", "minGramSize":3, "maxGramSize":15, "preserveOriginal":true},
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"}
+                ]
+            }
+        },
+        {
+            "name": "StemmedTitleField",
+            "class": "solr.TextField",
+            "indexAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class": "solr.EnglishMinimalStemFilterFactory"},
                     {"class": "solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
                     {"class": "solr.LowerCaseFilterFactory"}
                 ]
@@ -98,9 +122,8 @@
                     "class":"solr.StandardTokenizerFactory"
                 },
                 "filters":[
-                    {"class": "solr.SynonymGraphFilterFactory",  "ignoreCase":"true", "synonyms":"titlesynonyms.txt", "expand":"false"},
+                    {"class": "solr.SynonymGraphFilterFactory",  "ignoreCase":true, "synonyms":"titlesynonyms.txt", "expand":false},
                     {"class": "solr.FlattenGraphFilterFactory"},
-                    {"class": "solr.EnglishMinimalStemFilterFactory"},
                     {"class": "solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
                     {"class": "solr.LowerCaseFilterFactory"}
                 ]
@@ -123,8 +146,7 @@
                     "class":"solr.StandardTokenizerFactory"
                 },
                 "filters":[
-                    {"class": "solr.BeiderMorseFilterFactory", "nameType":"GENERIC", "ruleType":"APPROX", "concat":"true", "languageSet":"auto"},
-                    {"class": "solr.EnglishMinimalStemFilterFactory"}
+                    {"class": "solr.BeiderMorseFilterFactory", "nameType":"GENERIC", "ruleType":"APPROX", "concat":"true", "languageSet":"auto"}
                 ]
             },
             "queryAnalyzer":{
@@ -132,7 +154,59 @@
                     "class":"solr.StandardTokenizerFactory"
                 },
                 "filters":[
-                    {"class": "solr.BeiderMorseFilterFactory", "nameType":"GENERIC", "ruleType":"APPROX", "concat":"true", "languageSet":"auto"},
+                    {"class": "solr.BeiderMorseFilterFactory", "nameType":"GENERIC", "ruleType":"APPROX", "concat":"true", "languageSet":"auto"}
+                ]
+            }
+        },
+        {
+            "name": "LineTextField",
+            "class": "solr.TextField",
+            "indexAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory"},
+                    {"class":"solr.LowerCaseFilterFactory"},
+                    {"class":"solr.NGramFilterFactory", "minGramSize":3, "maxGramSize":15, "preserveOriginal":true}
+
+                ]
+            },
+            "queryAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory"},
+                    {"class":"solr.LowerCaseFilterFactory"},
+                    {"class":"solr.NGramFilterFactory", "minGramSize":3, "maxGramSize":15, "preserveOriginal":true}
+                ]
+            }
+        },
+        {
+            "name": "StemmedLineTextField",
+            "class": "solr.TextField",
+            "indexAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory"},
+                    {"class":"solr.LowerCaseFilterFactory"},
+                    {"class":"solr.EnglishMinimalStemFilterFactory"}
+                ]
+            }
+        },
+        {
+            "name": "SynonymsLineTextField",
+            "class": "solr.TextField",
+            "indexAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory"},
+                    {"class":"solr.LowerCaseFilterFactory"},
                     {"class":"solr.EnglishMinimalStemFilterFactory"}
                 ]
             }
@@ -140,8 +214,84 @@
 
 
 
+
+
+
+
         {
-            "name":"movieTitle",
+            "name": "conversationCharacter",
+            "class": "solr.TextField",
+            "indexAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"},
+                    
+                ]
+            },
+            "queryAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"}
+                ]
+            }
+        },
+        {
+            "name": "conversationMovie",
+            "class": "solr.TextField",
+            "indexAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"}
+                ]
+            },
+            "queryAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"}
+                ]
+            }
+        },
+        {
+            "name": "conversationActor",
+            "class": "solr.TextField",
+            "indexAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"}
+                ]
+            },
+            "queryAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"}
+                ]
+            }
+        },
+        {
+            "name": "dialogueId",
+            "class": "solr.TrieIntField",
+            "precisionStep": 8
+        },
+        {
+            "name":"lineText",
             "class":"solr.TextField",
             "indexAnalyzer":{
                 "tokenizer":{
@@ -161,183 +311,80 @@
                     {"class":"solr.LowerCaseFilterFactory"}
                 ]
             }
-        },
-        {
-            "name": "movieYear",
-            "class": "solr.TrieIntField",
-            "precisionStep": 8
-        },
-        {
-            "name": "movieRating",
-            "class": "solr.TrieFloatField"
-        },
-        {
-            "name": "movieVotes",
-            "class": "solr.TrieIntField",
-            "precisionStep": 8
-        },
-        {
-            "name": "movieRuntime",
-            "class": "solr.TrieIntField",
-            "precisionStep": 8
-        },
-        {
-            "name": "movieRevenue",
-            "class": "solr.TrieIntField",
-            "precisionStep": 8
-        },
-        {
-            "name": "moviePosterURL",
-            "class": "solr.TextField"
-        },
-        {
-            "name": "movieCharacter",
-            "class": "solr.TextField",
-            "indexAnalyzer":{
-                "tokenizer":{
-                    "class":"solr.StandardTokenizerFactory"
-                },
-                "filters":[
-                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
-                    {"class":"solr.LowerCaseFilterFactory"}
-                ]
-            },
-            "queryAnalyzer":{
-                "tokenizer":{
-                    "class":"solr.StandardTokenizerFactory"
-                },
-                "filters":[
-                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
-                    {"class":"solr.LowerCaseFilterFactory"}
-                ]
-            }
-        },
-        {
-            "name": "movieGenre",
-            "class": "solr.TextField",
-            "indexAnalyzer":{
-                "tokenizer":{
-                    "class":"solr.StandardTokenizerFactory"
-                },
-                "filters":[
-                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
-                    {"class":"solr.LowerCaseFilterFactory"}
-                ]
-            },
-            "queryAnalyzer":{
-                "tokenizer":{
-                    "class":"solr.StandardTokenizerFactory"
-                },
-                "filters":[
-                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
-                    {"class":"solr.LowerCaseFilterFactory"}
-                ]
-            }
-        },
-        {
-            "name": "movieActor",
-            "class": "solr.TextField",
-            "indexAnalyzer":{
-                "tokenizer":{
-                    "class":"solr.StandardTokenizerFactory"
-                },
-                "filters":[
-                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
-                    {"class":"solr.LowerCaseFilterFactory"}
-                ]
-            },
-            "queryAnalyzer":{
-                "tokenizer":{
-                    "class":"solr.StandardTokenizerFactory"
-                },
-                "filters":[
-                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
-                    {"class":"solr.LowerCaseFilterFactory"}
-                ]
-            }
         }
-        
     ],
     "add-field": [
         {
-            "name": "title",
-            "type": "movieTitle",
+            "name": "type_string",
+            "type": "types",
             "indexed": true,
-            "stored": true,
-            "multiValued": false,
-            "required": true
-        },
-        {
-            "name": "year",
-            "type": "movieYear",
-            "indexed": true,
-            "stored": true,
-            "multiValued": false,
-            "required": true
-        },
-        {
-            "name": "imdb_rating",
-            "type": "movieRating",
-            "indexed": true,
-            "stored": true,
-            "multiValued": false,
-            "required": true
-        },
-        {
-            "name": "imdb_votes",
-            "type": "movieVotes",
-            "indexed": true,
-            "stored": true,
-            "multiValued": false,
-            "required": true
-        },
-        {
-            "name": "runtime",
-            "type": "movieRuntime",
-            "indexed": true,
-            "stored": true,
-            "multiValued": false,
-            "required": true
-        },
-        {
-            "name": "revenue",
-            "type": "movieRevenue",
-            "indexed": true,
-            "stored": true,
-            "multiValued": false,
-            "required": true
-        },
-        {
-            "name": "poster_path",
-            "type": "moviePosterURL",
-            "indexed": false,
             "stored": true,
             "multiValued": false,
             "required": false
         },
         {
             "name": "characters",
-            "type": "movieCharacter",
+            "type": "conversationCharacter",
             "indexed": true,
             "stored": true,
             "multiValued": true,
             "required": false
         },
         {
-            "name": "genres",
-            "type": "movieGenre",
+            "name": "character",
+            "type": "conversationCharacter",
             "indexed": true,
             "stored": true,
-            "multiValued": true,
+            "multiValued": false,
             "required": false
         },
         {
             "name": "actors",
-            "type": "movieActor",
+            "type": "conversationActor",
             "indexed": true,
             "stored": true,
             "multiValued": true,
             "required": false
+        },
+        {
+            "name": "actor",
+            "type": "conversationActor",
+            "indexed": true,
+            "stored": true,
+            "multiValued": false,
+            "required": false
+        },
+        {
+            "name": "movie",
+            "type": "conversationMovie",
+            "indexed": true,
+            "stored": true,
+            "multiValued": false,
+            "required": false
+        },
+        {
+            "name": "previous_dialogue",
+            "type": "dialogueId",
+            "indexed": false,
+            "stored": true,
+            "multiValued": false,
+            "required": false
+        },
+        {
+            "name": "next_dialogue",
+            "type": "dialogueId",
+            "indexed": false,
+            "stored": true,
+            "multiValued": false,
+            "required": false
+        },
+        {
+            "name": "text",
+            "type": "lineText",
+            "indexed": true,
+            "stored": true,
+            "multiValued": false,
+            "required": false
         }
-    ]
+    ]    
 }
