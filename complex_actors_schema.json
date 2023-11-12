@@ -54,7 +54,9 @@
                     "class":"solr.StandardTokenizerFactory"
                 },
                 "filters":[
-                    {"class":"solr.BeiderMorseFilterFactory", "nameType":"GENERIC", "ruleType":"APPROX", "concat":"true", "languageSet":"auto"}
+                    {"class":"solr.BeiderMorseFilterFactory", "nameType":"GENERIC", "ruleType":"APPROX", "concat":"true", "languageSet":"auto"},
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"}
                 ]
             },
             "queryAnalyzer":{
@@ -62,7 +64,9 @@
                     "class":"solr.StandardTokenizerFactory"
                 },
                 "filters":[
-                    {"class":"solr.BeiderMorseFilterFactory", "nameType":"GENERIC", "ruleType":"APPROX", "concat":"true", "languageSet":"auto"}
+                    {"class":"solr.BeiderMorseFilterFactory", "nameType":"GENERIC", "ruleType":"APPROX", "concat":"true", "languageSet":"auto"},
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"}
                 ]
             }
         },
@@ -122,12 +126,20 @@
             "stored": true
         },
         {
-            "name": "movies",
-            "type": "movieTitle",
+            "name":"characters_synonyms",
+            "type":"SynonymsNameTextField",
+            "multiValued":true,
+            "indexed":true,
+            "required":false,
+            "stored":false
+        },
+        {
+            "name": "characters_phonetic",
+            "type": "PhoneticNameTextField",
             "multiValued": true,
             "indexed": true,
             "required": false,
-            "stored": true  
+            "stored": false
         },
         {
             "name": "related_actors",
@@ -136,6 +148,30 @@
             "indexed": true,
             "required": false,
             "stored": true
+        },
+        {
+            "name":"related_actors_synonyms",
+            "type":"SynonymsNameTextField",
+            "multiValued":true,
+            "indexed":true,
+            "required":false,
+            "stored":false
+        },
+        {
+            "name": "related_actors_phonetic",
+            "type": "PhoneticNameTextField",
+            "multiValued": true,
+            "indexed": true,
+            "required": false,
+            "stored": false
+        },
+        {
+            "name": "movies",
+            "type": "movieTitle",
+            "multiValued": true,
+            "indexed": true,
+            "required": false,
+            "stored": true  
         }
     ],
 
@@ -147,6 +183,22 @@
         {
             "source": "name",
             "dest": "name_synonyms"
+        },
+        {
+            "source": "characters",
+            "dest": "characters_phonetic"
+        },
+        {
+            "source": "characters",
+            "dest": "characters_synonyms"
+        },
+        {
+            "source": "related_actors",
+            "dest": "related_actors_phonetic"
+        },
+        {
+            "source": "related_actors",
+            "dest": "related_actors_synonyms"
         }
     ]
 }
