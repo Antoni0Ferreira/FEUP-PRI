@@ -7,6 +7,10 @@
 docker exec moviehut_solr bin/solr delete -c movies
 docker exec moviehut_solr bin/solr delete -c actors
 docker exec moviehut_solr bin/solr delete -c conversations
+docker exec moviehut_solr bin/solr delete -c complex_actors
+docker exec moviehut_solr bin/solr delete -c complex_conversations
+docker exec moviehut_solr bin/solr delete -c simple_actors
+docker exec moviehut_solr bin/solr delete -c simple_conversations
 
 # Create 3 Cores, define their schemas and populate them
 docker exec moviehut_solr bin/solr create_core -c movies
@@ -22,26 +26,53 @@ curl -X POST -H 'Content-type:application/json' \
 
 #-----------------#
 
-docker exec moviehut_solr bin/solr create_core -c actors
-
-docker cp namesynonyms.txt moviehut_solr:/var/solr/data/actors/namesynonyms.txt
+docker exec moviehut_solr bin/solr create_core -c simple_actors
 
 curl -X POST -H 'Content-type:application/json' \
-    --data-binary "@complex_actors_schema.json" \
-    http://localhost:8983/solr/actors/schema
+    --data-binary "@simple_actors_schema.json" \
+    http://localhost:8983/solr/simple_actors/schema
 
 curl -X POST -H 'Content-type:application/json' \
     --data-binary "@actors.json" \
-    http://localhost:8983/solr/actors/update?commit=true
+    http://localhost:8983/solr/simple_actors/update?commit=true
 
 #-----------------#
 
-docker exec moviehut_solr bin/solr create_core -c conversations
+docker exec moviehut_solr bin/solr create_core -c simple_conversations
 
 curl -X POST -H 'Content-type:application/json' \
-    --data-binary "@conversation_schema.json" \
-    http://localhost:8983/solr/conversations/schema
+    --data-binary "@simple_conversation_schema.json" \
+    http://localhost:8983/solr/simple_conversations/schema
 
 curl -X POST -H 'Content-type:application/json' \
     --data-binary "@conversations.json" \
-    http://localhost:8983/solr/conversations/update?commit=true
+    http://localhost:8983/solr/simple_conversations/update?commit=true
+
+#-----------------#
+
+docker exec moviehut_solr bin/solr create_core -c complex_actors
+
+docker cp namesynonyms.txt moviehut_solr:/var/solr/data/complex_actors/namesynonyms.txt
+
+curl -X POST -H 'Content-type:application/json' \
+    --data-binary "@complex_actors_schema.json" \
+    http://localhost:8983/solr/complex_actors/schema
+
+curl -X POST -H 'Content-type:application/json' \
+    --data-binary "@actors.json" \
+    http://localhost:8983/solr/complex_actors/update?commit=true
+
+#-----------------#
+
+docker exec moviehut_solr bin/solr create_core -c complex_conversations
+
+docker cp namesynonyms.txt moviehut_solr:/var/solr/data/complex_conversations/namesynonyms.txt
+docker cp synonyms.txt moviehut_solr:/var/solr/data/complex_conversations/synonyms.txt
+
+curl -X POST -H 'Content-type:application/json' \
+    --data-binary "@complex_conversation_schema.json" \
+    http://localhost:8983/solr/complex_conversations/schema
+
+curl -X POST -H 'Content-type:application/json' \
+    --data-binary "@conversations.json" \
+    http://localhost:8983/solr/complex_conversations/update?commit=true

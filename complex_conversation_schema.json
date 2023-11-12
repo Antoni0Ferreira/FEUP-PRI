@@ -169,11 +169,28 @@
         {
             "name": "characters",
             "type": "NameTextField",
-            "indexed": true,
-            "stored": true,
             "multiValued": true,
-            "required": false
+            "indexed": true,
+            "required": false,
+            "stored": true
         },
+        {
+            "name":"characters_synonyms",
+            "type":"SynonymsNameTextField",
+            "multiValued":true,
+            "indexed":true,
+            "required":false,
+            "stored":false
+        },
+        {
+            "name": "characters_phonetic",
+            "type": "PhoneticNameTextField",
+            "multiValued": true,
+            "indexed": true,
+            "required": false,
+            "stored": false
+        },
+
         {
             "name": "character",
             "type": "NameTextField",
@@ -183,6 +200,23 @@
             "required": false
         },
         {
+            "name": "character_synonyms",
+            "type": "SynonymsNameTextField",
+            "indexed": true,
+            "stored": false,
+            "multiValued": false,
+            "required": false
+        },
+        {
+            "name": "character_phonetic",
+            "type": "PhoneticNameTextField",
+            "indexed": true,
+            "stored": false,
+            "multiValued": false,
+            "required": false
+        },
+
+        {
             "name": "actors",
             "type": "NameTextField",
             "indexed": true,
@@ -190,6 +224,23 @@
             "multiValued": true,
             "required": false
         },
+        {
+            "name": "actors_synonyms",
+            "type": "SynonymsNameTextField",
+            "indexed": true,
+            "stored": false,
+            "multiValued": true,
+            "required": false
+        },
+        {
+            "name": "actors_phonetic",
+            "type": "PhoneticNameTextField",
+            "indexed": true,
+            "stored": false,
+            "multiValued": true,
+            "required": false
+        },
+
         {
             "name": "actor",
             "type": "NameTextField",
@@ -199,13 +250,73 @@
             "required": false
         },
         {
+            "name": "actor_synonyms",
+            "type": "SynonymsNameTextField",
+            "indexed": true,
+            "stored": false,
+            "multiValued": false,
+            "required": false
+        },
+        {
+            "name": "actor_phonetic",
+            "type": "PhoneticNameTextField",
+            "indexed": true,
+            "stored": false,
+            "multiValued": false,
+            "required": false
+        },
+
+        {
+            "name": "genres",
+            "type": "GenericTextField",
+            "indexed": true,
+            "stored": true,
+            "multiValued": true,
+            "required": false
+        },
+        {
+            "name": "genres_stemmed",
+            "type": "StemmedGenericTextField",
+            "indexed": true,
+            "stored": false,
+            "multiValued": true,
+            "required": false
+        },
+
+        {
             "name": "movie",
-            "type": "conversationMovie",
+            "type": "GenericTextField",
             "indexed": true,
             "stored": true,
             "multiValued": false,
             "required": false
         },
+        {
+            "name": "movie_stemmed",
+            "type": "StemmedGenericTextField",
+            "indexed": true,
+            "stored": false,
+            "multiValued": false,
+            "required": false
+        },
+        {
+            "name": "movie_synonyms",
+            "type": "SynonymsGenericTextField",
+            "indexed": true,
+            "stored": false,
+            "multiValued": false,
+            "required": false
+        },
+        {
+            "name": "movie_phonetic",
+            "type": "PhoneticGenericTextField",
+            "indexed": true,
+            "stored": false,
+            "multiValued": false,
+            "required": false
+        },
+
+
         {
             "name": "previous_dialogue",
             "type": "dialogueId",
@@ -222,13 +333,105 @@
             "multiValued": false,
             "required": false
         },
+
         {
             "name": "text",
-            "type": "lineText",
+            "type": "GenericTextField",
+            "indexed": true,
+            "stored": true,
+            "multiValued": false,
+            "required": false
+        },
+        {
+            "name": "text_stemmed",
+            "type": "StemmedGenericTextField",
+            "indexed": true,
+            "stored": false,
+            "multiValued": false,
+            "required": false
+        },
+        {
+            "name": "text_synonyms",
+            "type": "SynonymsGenericTextField",
+            "indexed": true,
+            "stored": false,
+            "multiValued": false,
+            "required": false
+        },
+        {
+            "name": "text_phonetic",
+            "type": "PhoneticGenericTextField",
+            "indexed": true,
+            "stored": false,
+            "multiValued": false,
+            "required": false
+        },
+        {
+            "name": "content_type",
+            "type": "string",
             "indexed": true,
             "stored": true,
             "multiValued": false,
             "required": false
         }
-    ]    
+    ],
+    
+    "add-copy-field": [
+        {
+            "source": "character",
+            "dest": "character_phonetic"
+        },
+        {
+            "source": "character",
+            "dest": "characters_synonyms"
+        },
+        {
+            "source": "characters",
+            "dest": "characters_phonetic"
+        },
+        {
+            "source": "characters",
+            "dest": "characters_synonyms"
+        },
+        {
+            "source": "actors",
+            "dest": "actors_phonetic"
+        },
+        {
+            "source": "actors",
+            "dest": "actors_synonyms"
+        },
+        {
+            "source": "actor",
+            "dest": "actor_phonetic"
+        },
+        {
+            "source": "actor",
+            "dest": "actor_synonyms"
+        },
+        {
+            "source": "movie",
+            "dest": "movie_stemmed"
+        },
+        {
+            "source": "movie",
+            "dest": "movie_phonetic"
+        },
+        {
+            "source": "movie",
+            "dest": "movie_synonyms"
+        },
+        {
+            "source": "text",
+            "dest": "text_stemmed"
+        },
+        {
+            "source": "text",
+            "dest": "text_phonetic"
+        },
+        {
+            "source": "text",
+            "dest": "text_synonyms"
+        }
+    ]
 }

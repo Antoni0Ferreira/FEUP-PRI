@@ -1,8 +1,8 @@
 {
     "add-field-type" : [
         {
-            "name":"types",
-            "class":"solr.TextField",
+            "name": "NameTextField",
+            "class" : "solr.TextField",
             "indexAnalyzer":{
                 "tokenizer":{
                     "class":"solr.StandardTokenizerFactory"
@@ -23,15 +23,16 @@
             }
         },
         {
-            "name": "conversationCharacter",
+            "name": "GenericTextField",
             "class": "solr.TextField",
             "indexAnalyzer":{
                 "tokenizer":{
                     "class":"solr.StandardTokenizerFactory"
                 },
                 "filters":[
-                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
-                    {"class":"solr.LowerCaseFilterFactory"}
+                    {"class":"solr.NGramFilterFactory", "minGramSize":3, "maxGramSize":15, "preserveOriginal":true},
+                    {"class": "solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class": "solr.LowerCaseFilterFactory"}
                 ]
             },
             "queryAnalyzer":{
@@ -39,50 +40,7 @@
                     "class":"solr.StandardTokenizerFactory"
                 },
                 "filters":[
-                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
-                    {"class":"solr.LowerCaseFilterFactory"}
-                ]
-            }
-        },
-        {
-            "name": "conversationMovie",
-            "class": "solr.TextField",
-            "indexAnalyzer":{
-                "tokenizer":{
-                    "class":"solr.StandardTokenizerFactory"
-                },
-                "filters":[
-                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
-                    {"class":"solr.LowerCaseFilterFactory"}
-                ]
-            },
-            "queryAnalyzer":{
-                "tokenizer":{
-                    "class":"solr.StandardTokenizerFactory"
-                },
-                "filters":[
-                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
-                    {"class":"solr.LowerCaseFilterFactory"}
-                ]
-            }
-        },
-        {
-            "name": "conversationActor",
-            "class": "solr.TextField",
-            "indexAnalyzer":{
-                "tokenizer":{
-                    "class":"solr.StandardTokenizerFactory"
-                },
-                "filters":[
-                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
-                    {"class":"solr.LowerCaseFilterFactory"}
-                ]
-            },
-            "queryAnalyzer":{
-                "tokenizer":{
-                    "class":"solr.StandardTokenizerFactory"
-                },
-                "filters":[
+                    {"class":"solr.NGramFilterFactory", "minGramSize":3, "maxGramSize":15, "preserveOriginal":true},
                     {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
                     {"class":"solr.LowerCaseFilterFactory"}
                 ]
@@ -92,50 +50,21 @@
             "name": "dialogueId",
             "class": "solr.TrieIntField",
             "precisionStep": 8
-        },
-        {
-            "name":"lineText",
-            "class":"solr.TextField",
-            "indexAnalyzer":{
-                "tokenizer":{
-                    "class":"solr.StandardTokenizerFactory"
-                },
-                "filters":[
-                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
-                    {"class":"solr.LowerCaseFilterFactory"}
-                ]
-            },
-            "queryAnalyzer":{
-                "tokenizer":{
-                    "class":"solr.StandardTokenizerFactory"
-                },
-                "filters":[
-                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
-                    {"class":"solr.LowerCaseFilterFactory"}
-                ]
-            }
         }
     ],
+    
     "add-field": [
         {
-            "name": "type_string",
-            "type": "types",
-            "indexed": true,
-            "stored": true,
-            "multiValued": false,
-            "required": false
-        },
-        {
             "name": "characters",
-            "type": "conversationCharacter",
-            "indexed": true,
-            "stored": true,
+            "type": "NameTextField",
             "multiValued": true,
-            "required": false
+            "indexed": true,
+            "required": false,
+            "stored": true
         },
         {
             "name": "character",
-            "type": "conversationCharacter",
+            "type": "NameTextField",
             "indexed": true,
             "stored": true,
             "multiValued": false,
@@ -143,7 +72,7 @@
         },
         {
             "name": "actors",
-            "type": "conversationActor",
+            "type": "NameTextField",
             "indexed": true,
             "stored": true,
             "multiValued": true,
@@ -151,15 +80,23 @@
         },
         {
             "name": "actor",
-            "type": "conversationActor",
+            "type": "NameTextField",
             "indexed": true,
             "stored": true,
             "multiValued": false,
             "required": false
         },
         {
+            "name": "genres",
+            "type": "GenericTextField",
+            "indexed": true,
+            "stored": true,
+            "multiValued": true,
+            "required": false
+        },
+        {
             "name": "movie",
-            "type": "conversationMovie",
+            "type": "GenericTextField",
             "indexed": true,
             "stored": true,
             "multiValued": false,
@@ -183,11 +120,19 @@
         },
         {
             "name": "text",
-            "type": "lineText",
+            "type": "GenericTextField",
+            "indexed": true,
+            "stored": true,
+            "multiValued": false,
+            "required": false
+        },
+        {
+            "name": "content_type",
+            "type": "string",
             "indexed": true,
             "stored": true,
             "multiValued": false,
             "required": false
         }
-    ]    
+    ]
 }
