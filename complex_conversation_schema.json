@@ -67,7 +67,7 @@
             }
         },
         {
-            "name": "TextTitleField",
+            "name": "GenericTextField",
             "class": "solr.TextField",
             "indexAnalyzer":{
                 "tokenizer":{
@@ -91,7 +91,7 @@
             }
         },
         {
-            "name": "StemmedTitleField",
+            "name": "StemmedGenericTextField",
             "class": "solr.TextField",
             "indexAnalyzer":{
                 "tokenizer":{
@@ -115,14 +115,14 @@
             }
         },
         {
-            "name": "SynonymsTextTitleField",
+            "name": "SynonymsGenericTextField",
             "class": "solr.TextField",
             "indexAnalyzer":{
                 "tokenizer":{
                     "class":"solr.StandardTokenizerFactory"
                 },
                 "filters":[
-                    {"class": "solr.SynonymGraphFilterFactory",  "ignoreCase":true, "synonyms":"titlesynonyms.txt", "expand":false},
+                    {"class": "solr.SynonymGraphFilterFactory",  "ignoreCase":true, "synonyms":"synonyms.txt", "expand":false},
                     {"class": "solr.FlattenGraphFilterFactory"},
                     {"class": "solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
                     {"class": "solr.LowerCaseFilterFactory"}
@@ -139,7 +139,7 @@
             }
         },
         {
-            "name": "PhoneticTextTitleField",
+            "name": "PhoneticGenericTextField",
             "class" : "solr.TextField",
             "indexAnalyzer":{
                 "tokenizer":{
@@ -159,172 +159,16 @@
             }
         },
         {
-            "name": "LineTextField",
-            "class": "solr.TextField",
-            "indexAnalyzer":{
-                "tokenizer":{
-                    "class":"solr.StandardTokenizerFactory"
-                },
-                "filters":[
-                    {"class":"solr.ASCIIFoldingFilterFactory"},
-                    {"class":"solr.LowerCaseFilterFactory"},
-                    {"class":"solr.NGramFilterFactory", "minGramSize":3, "maxGramSize":15, "preserveOriginal":true}
-
-                ]
-            },
-            "queryAnalyzer":{
-                "tokenizer":{
-                    "class":"solr.StandardTokenizerFactory"
-                },
-                "filters":[
-                    {"class":"solr.ASCIIFoldingFilterFactory"},
-                    {"class":"solr.LowerCaseFilterFactory"},
-                    {"class":"solr.NGramFilterFactory", "minGramSize":3, "maxGramSize":15, "preserveOriginal":true}
-                ]
-            }
-        },
-        {
-            "name": "StemmedLineTextField",
-            "class": "solr.TextField",
-            "indexAnalyzer":{
-                "tokenizer":{
-                    "class":"solr.StandardTokenizerFactory"
-                },
-                "filters":[
-                    {"class":"solr.ASCIIFoldingFilterFactory"},
-                    {"class":"solr.LowerCaseFilterFactory"},
-                    {"class":"solr.EnglishMinimalStemFilterFactory"}
-                ]
-            }
-        },
-        {
-            "name": "SynonymsLineTextField",
-            "class": "solr.TextField",
-            "indexAnalyzer":{
-                "tokenizer":{
-                    "class":"solr.StandardTokenizerFactory"
-                },
-                "filters":[
-                    {"class":"solr.ASCIIFoldingFilterFactory"},
-                    {"class":"solr.LowerCaseFilterFactory"},
-                    {"class":"solr.EnglishMinimalStemFilterFactory"}
-                ]
-            }
-        },
-
-
-
-
-
-
-
-        {
-            "name": "conversationCharacter",
-            "class": "solr.TextField",
-            "indexAnalyzer":{
-                "tokenizer":{
-                    "class":"solr.StandardTokenizerFactory"
-                },
-                "filters":[
-                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
-                    {"class":"solr.LowerCaseFilterFactory"},
-                    
-                ]
-            },
-            "queryAnalyzer":{
-                "tokenizer":{
-                    "class":"solr.StandardTokenizerFactory"
-                },
-                "filters":[
-                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
-                    {"class":"solr.LowerCaseFilterFactory"}
-                ]
-            }
-        },
-        {
-            "name": "conversationMovie",
-            "class": "solr.TextField",
-            "indexAnalyzer":{
-                "tokenizer":{
-                    "class":"solr.StandardTokenizerFactory"
-                },
-                "filters":[
-                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
-                    {"class":"solr.LowerCaseFilterFactory"}
-                ]
-            },
-            "queryAnalyzer":{
-                "tokenizer":{
-                    "class":"solr.StandardTokenizerFactory"
-                },
-                "filters":[
-                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
-                    {"class":"solr.LowerCaseFilterFactory"}
-                ]
-            }
-        },
-        {
-            "name": "conversationActor",
-            "class": "solr.TextField",
-            "indexAnalyzer":{
-                "tokenizer":{
-                    "class":"solr.StandardTokenizerFactory"
-                },
-                "filters":[
-                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
-                    {"class":"solr.LowerCaseFilterFactory"}
-                ]
-            },
-            "queryAnalyzer":{
-                "tokenizer":{
-                    "class":"solr.StandardTokenizerFactory"
-                },
-                "filters":[
-                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
-                    {"class":"solr.LowerCaseFilterFactory"}
-                ]
-            }
-        },
-        {
             "name": "dialogueId",
             "class": "solr.TrieIntField",
             "precisionStep": 8
-        },
-        {
-            "name":"lineText",
-            "class":"solr.TextField",
-            "indexAnalyzer":{
-                "tokenizer":{
-                    "class":"solr.StandardTokenizerFactory"
-                },
-                "filters":[
-                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
-                    {"class":"solr.LowerCaseFilterFactory"}
-                ]
-            },
-            "queryAnalyzer":{
-                "tokenizer":{
-                    "class":"solr.StandardTokenizerFactory"
-                },
-                "filters":[
-                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
-                    {"class":"solr.LowerCaseFilterFactory"}
-                ]
-            }
         }
     ],
+    
     "add-field": [
         {
-            "name": "type_string",
-            "type": "types",
-            "indexed": true,
-            "stored": true,
-            "multiValued": false,
-            "required": false
-        },
-        {
             "name": "characters",
-            "type": "conversationCharacter",
+            "type": "NameTextField",
             "indexed": true,
             "stored": true,
             "multiValued": true,
@@ -332,7 +176,7 @@
         },
         {
             "name": "character",
-            "type": "conversationCharacter",
+            "type": "NameTextField",
             "indexed": true,
             "stored": true,
             "multiValued": false,
@@ -340,7 +184,7 @@
         },
         {
             "name": "actors",
-            "type": "conversationActor",
+            "type": "NameTextField",
             "indexed": true,
             "stored": true,
             "multiValued": true,
@@ -348,7 +192,7 @@
         },
         {
             "name": "actor",
-            "type": "conversationActor",
+            "type": "NameTextField",
             "indexed": true,
             "stored": true,
             "multiValued": false,
