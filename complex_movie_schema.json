@@ -9,79 +9,10 @@
                 },
                 "filters":[
                     {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
-                    {"class":"solr.LowerCaseFilterFactory"}
-                ]
-            },
-            "queryAnalyzer":{
-                "tokenizer":{
-                    "class":"solr.StandardTokenizerFactory"
-                },
-                "filters":[
-                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
-                    {"class":"solr.LowerCaseFilterFactory"}
-                ]
-            }
-        },
-        {
-            "name": "NGramGenericTextField",
-            "class": "solr.TextField",
-            "indexAnalyzer":{
-                "tokenizer":{
-                    "class":"solr.StandardTokenizerFactory"
-                },
-                "filters":[
-                    {"class":"solr.NGramFilterFactory", "minGramSize":3, "maxGramSize":15, "preserveOriginal":true},
-                    {"class": "solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
-                    {"class": "solr.LowerCaseFilterFactory"}
-                ]
-            },
-            "queryAnalyzer":{
-                "tokenizer":{
-                    "class":"solr.StandardTokenizerFactory"
-                },
-                "filters":[
-                    {"class":"solr.NGramFilterFactory", "minGramSize":3, "maxGramSize":15, "preserveOriginal":true},
-                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
-                    {"class":"solr.LowerCaseFilterFactory"}
-                ]
-            }
-        },
-        {
-            "name": "StemmedGenericTextField",
-            "class": "solr.TextField",
-            "indexAnalyzer":{
-                "tokenizer":{
-                    "class":"solr.StandardTokenizerFactory"
-                },
-                "filters":[
-                    {"class": "solr.EnglishMinimalStemFilterFactory"},
-                    {"class": "solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
-                    {"class": "solr.LowerCaseFilterFactory"}
-                ]
-            },
-            "queryAnalyzer":{
-                "tokenizer":{
-                    "class":"solr.StandardTokenizerFactory"
-                },
-                "filters":[
+                    {"class":"solr.LowerCaseFilterFactory"},
                     {"class":"solr.EnglishMinimalStemFilterFactory"},
-                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
-                    {"class":"solr.LowerCaseFilterFactory"}
-                ]
-            }
-        },
-        {
-            "name": "SynonymsGenericTextField",
-            "class": "solr.TextField",
-            "indexAnalyzer":{
-                "tokenizer":{
-                    "class":"solr.StandardTokenizerFactory"
-                },
-                "filters":[
                     {"class": "solr.SynonymGraphFilterFactory",  "ignoreCase":true, "synonyms":"othersynonyms.txt", "expand":true},
-                    {"class": "solr.FlattenGraphFilterFactory"},
-                    {"class": "solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
-                    {"class": "solr.LowerCaseFilterFactory"}
+                    {"class": "solr.FlattenGraphFilterFactory"}
                 ]
             },
             "queryAnalyzer":{
@@ -90,27 +21,10 @@
                 },
                 "filters":[
                     {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
-                    {"class":"solr.LowerCaseFilterFactory"}
-                ]
-            }
-        },
-        {
-            "name": "PhoneticGenericTextField",
-            "class" : "solr.TextField",
-            "indexAnalyzer":{
-                "tokenizer":{
-                    "class":"solr.StandardTokenizerFactory"
-                },
-                "filters":[
-                    {"class": "solr.BeiderMorseFilterFactory", "nameType":"GENERIC", "ruleType":"APPROX", "concat":"true", "languageSet":"auto"}
-                ]
-            },
-            "queryAnalyzer":{
-                "tokenizer":{
-                    "class":"solr.StandardTokenizerFactory"
-                },
-                "filters":[
-                    {"class": "solr.BeiderMorseFilterFactory", "nameType":"GENERIC", "ruleType":"APPROX", "concat":"true", "languageSet":"auto"}
+                    {"class":"solr.LowerCaseFilterFactory"},
+                    {"class":"solr.EnglishMinimalStemFilterFactory"},
+                    {"class": "solr.SynonymGraphFilterFactory",  "ignoreCase":true, "synonyms":"othersynonyms.txt", "expand":true},
+                    {"class": "solr.FlattenGraphFilterFactory"}
                 ]
             }
         },
@@ -123,31 +37,9 @@
                 },
                 "filters":[
                     {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
-                    {"class":"solr.LowerCaseFilterFactory"}
-                ]
-            },
-            "queryAnalyzer":{
-                "tokenizer":{
-                    "class":"solr.StandardTokenizerFactory"
-                },
-                "filters":[
-                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
-                    {"class":"solr.LowerCaseFilterFactory"}
-                ]
-            }
-        },
-        {
-            "name":"SynonymsNameTextField",
-            "class":"solr.TextField",
-            "indexAnalyzer":{
-                "tokenizer":{
-                    "class":"solr.StandardTokenizerFactory"
-                },
-                "filters":[
+                    {"class":"solr.LowerCaseFilterFactory"},
                     {"class":"solr.SynonymGraphFilterFactory",  "ignoreCase":"true", "synonyms":"namesynonyms.txt", "expand":false},
-                    {"class":"solr.FlattenGraphFilterFactory"},
-                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
-                    {"class":"solr.LowerCaseFilterFactory"}
+                    {"class":"solr.FlattenGraphFilterFactory"}
                 ]
             },
             "queryAnalyzer":{
@@ -156,27 +48,9 @@
                 },
                 "filters":[
                     {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
-                    {"class":"solr.LowerCaseFilterFactory"}
-                ]
-            }
-        },
-        {
-            "name": "PhoneticNameTextField",
-            "class" : "solr.TextField",
-            "indexAnalyzer":{
-                "tokenizer":{
-                    "class":"solr.StandardTokenizerFactory"
-                },
-                "filters":[
-                    {"class":"solr.BeiderMorseFilterFactory", "nameType":"GENERIC", "ruleType":"APPROX", "concat":"true", "languageSet":"auto"}
-                ]
-            },
-            "queryAnalyzer":{
-                "tokenizer":{
-                    "class":"solr.StandardTokenizerFactory"
-                },
-                "filters":[
-                    {"class":"solr.BeiderMorseFilterFactory", "nameType":"GENERIC", "ruleType":"APPROX", "concat":"true", "languageSet":"auto"}
+                    {"class":"solr.LowerCaseFilterFactory"},
+                    {"class":"solr.SynonymGraphFilterFactory",  "ignoreCase":"true", "synonyms":"namesynonyms.txt", "expand":false},
+                    {"class":"solr.FlattenGraphFilterFactory"}
                 ]
             }
         },
@@ -204,38 +78,6 @@
             "stored": true,
             "multiValued": false,
             "required": true
-        },
-        {
-            "name": "title_ngrams",
-            "type": "NGramGenericTextField",
-            "indexed": true,
-            "stored": false,
-            "multiValued": false,
-            "required": false
-        },
-        {
-            "name": "title_stemmed",
-            "type": "StemmedGenericTextField",
-            "indexed": true,
-            "stored": false,
-            "multiValued": false,
-            "required": false
-        },
-        {
-            "name": "title_synonyms",
-            "type": "SynonymsGenericTextField",
-            "indexed": true,
-            "stored": false,
-            "multiValued": false,
-            "required": false
-        },
-        {
-            "name": "title_phonetic",
-            "type": "PhoneticGenericTextField",
-            "indexed": true,
-            "stored": false,
-            "multiValued": false,
-            "required": false
         },
         {
             "name": "year",
@@ -294,58 +136,10 @@
             "required": false
         },
         {
-            "name": "characters_synonyms",
-            "type": "SynonymsNameTextField",
-            "indexed": true,
-            "stored": false,
-            "multiValued": true,
-            "required": false
-        },
-        {
-            "name": "characters_phonetic",
-            "type": "PhoneticNameTextField",
-            "indexed": true,
-            "stored": false,
-            "multiValued": true,
-            "required": false
-        },
-        {
             "name": "genres",
             "type": "GenericTextField",
             "indexed": true,
             "stored": true,
-            "multiValued": true,
-            "required": false
-        },
-        {
-            "name": "genres_ngrams",
-            "type": "NGramGenericTextField",
-            "indexed": true,
-            "stored": false,
-            "multiValued": true,
-            "required": false
-        },
-        {
-            "name": "genres_stemmed",
-            "type": "StemmedGenericTextField",
-            "indexed": true,
-            "stored": false,
-            "multiValued": true,
-            "required": false
-        },
-        {
-            "name": "genres_synonyms",
-            "type": "SynonymsGenericTextField",
-            "indexed": true,
-            "stored": false,
-            "multiValued": true,
-            "required": false
-        },
-        {
-            "name": "genres_phonetic",
-            "type": "PhoneticGenericTextField",
-            "indexed": true,
-            "stored": false,
             "multiValued": true,
             "required": false
         },
@@ -356,65 +150,6 @@
             "stored": true,
             "multiValued": true,
             "required": false
-        },
-        {
-            "name": "actors_synonyms",
-            "type": "SynonymsNameTextField",
-            "indexed": true,
-            "stored": false,
-            "multiValued": true,
-            "required": false
-        },
-        {
-            "name": "actors_phonetic",
-            "type": "PhoneticNameTextField",
-            "indexed": true,
-            "stored": false,
-            "multiValued": true,
-            "required": false
-        }
-    ],
-    
-    "add-copy-field": [
-        {
-            "source": "characters",
-            "dest": "characters_phonetic"
-        },
-        {
-            "source": "characters",
-            "dest": "characters_synonyms"
-        },
-        {
-            "source": "actors",
-            "dest": "actors_phonetic"
-        },
-        {
-            "source": "actors",
-            "dest": "actors_synonyms"
-        },
-        {
-            "source": "genres",
-            "dest": "genres_phonetic"
-        },
-        {
-            "source": "genres",
-            "dest": "genres_synonyms"
-        },
-        {
-            "source": "title",
-            "dest": "title_ngrams"
-        },
-        {
-            "source": "title",
-            "dest": "title_stemmed"
-        },
-        {
-            "source": "title",
-            "dest": "title_synonyms"
-        },
-        {
-            "source": "title",
-            "dest": "title_phonetic"
         }
     ]
 }

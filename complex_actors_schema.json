@@ -1,6 +1,35 @@
 {
     "add-field-type" : [
         {
+            "name":"GenericTextField",
+            "class":"solr.TextField",
+            "indexAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"},
+                    {"class":"solr.EnglishMinimalStemFilterFactory"},
+                    {"class": "solr.SynonymGraphFilterFactory",  "ignoreCase":true, "synonyms":"othersynonyms.txt", "expand":true},
+                    {"class": "solr.FlattenGraphFilterFactory"}
+
+                ]
+            },
+            "queryAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"},
+                    {"class":"solr.EnglishMinimalStemFilterFactory"},
+                    {"class": "solr.SynonymGraphFilterFactory",  "ignoreCase":true, "synonyms":"othersynonyms.txt", "expand":true},
+                    {"class": "solr.FlattenGraphFilterFactory"}
+                ]
+            }
+        },
+        {
             "name": "NameTextField",
             "class" : "solr.TextField",
             "indexAnalyzer":{
@@ -9,7 +38,9 @@
                 },
                 "filters":[
                     {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
-                    {"class":"solr.LowerCaseFilterFactory"}
+                    {"class":"solr.LowerCaseFilterFactory"},
+                    {"class":"solr.SynonymGraphFilterFactory",  "ignoreCase":"true", "synonyms":"namesynonyms.txt", "expand":false},
+                    {"class":"solr.FlattenGraphFilterFactory"}
                 ]
             },
             "queryAnalyzer":{
@@ -18,77 +49,9 @@
                 },
                 "filters":[
                     {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
-                    {"class":"solr.LowerCaseFilterFactory"}
-                ]
-            }
-        },
-        {
-            "name":"SynonymsNameTextField",
-            "class":"solr.TextField",
-            "indexAnalyzer":{
-                "tokenizer":{
-                    "class":"solr.StandardTokenizerFactory"
-                },
-                "filters":[
-                    {"class":"solr.SynonymGraphFilterFactory",  "ignoreCase":"true", "synonyms":"namesynonyms.txt", "expand":"false"},
-                    {"class":"solr.FlattenGraphFilterFactory"},
-                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
-                    {"class":"solr.LowerCaseFilterFactory"}
-                ]
-            },
-            "queryAnalyzer":{
-                "tokenizer":{
-                    "class":"solr.StandardTokenizerFactory"
-                },
-                "filters":[
-                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
-                    {"class":"solr.LowerCaseFilterFactory"}
-                ]
-            }
-        },
-        {
-            "name": "PhoneticNameTextField",
-            "class" : "solr.TextField",
-            "indexAnalyzer":{
-                "tokenizer":{
-                    "class":"solr.StandardTokenizerFactory"
-                },
-                "filters":[
-                    {"class":"solr.BeiderMorseFilterFactory", "nameType":"GENERIC", "ruleType":"APPROX", "concat":"true", "languageSet":"auto"},
-                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
-                    {"class":"solr.LowerCaseFilterFactory"}
-                ]
-            },
-            "queryAnalyzer":{
-                "tokenizer":{
-                    "class":"solr.StandardTokenizerFactory"
-                },
-                "filters":[
-                    {"class":"solr.BeiderMorseFilterFactory", "nameType":"GENERIC", "ruleType":"APPROX", "concat":"true", "languageSet":"auto"},
-                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
-                    {"class":"solr.LowerCaseFilterFactory"}
-                ]
-            }
-        },
-        {
-            "name": "movieTitle",
-            "class": "solr.TextField",
-            "indexAnalyzer":{
-                "tokenizer":{
-                    "class":"solr.StandardTokenizerFactory"
-                },
-                "filters":[
-                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
-                    {"class":"solr.LowerCaseFilterFactory"}
-                ]
-            },
-            "queryAnalyzer":{
-                "tokenizer":{
-                    "class":"solr.StandardTokenizerFactory"
-                },
-                "filters":[
-                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
-                    {"class":"solr.LowerCaseFilterFactory"}
+                    {"class":"solr.LowerCaseFilterFactory"},
+                    {"class":"solr.SynonymGraphFilterFactory",  "ignoreCase":"true", "synonyms":"namesynonyms.txt", "expand":false},
+                    {"class":"solr.FlattenGraphFilterFactory"}
                 ]
             }
         }
@@ -104,42 +67,12 @@
             "required": true
         },
         {
-            "name": "name_synonyms",
-            "type": "SynonymsNameTextField",
-            "indexed": true,
-            "stored": false,
-            "multiValued": true
-        },
-        {
-            "name": "name_phonetic",
-            "type": "PhoneticNameTextField",
-            "indexed": true,
-            "stored": false,
-            "multiValued": false
-        },
-        {
             "name": "characters",
             "type": "NameTextField",
             "multiValued": true,
             "indexed": true,
             "required": false,
             "stored": true
-        },
-        {
-            "name":"characters_synonyms",
-            "type":"SynonymsNameTextField",
-            "multiValued":true,
-            "indexed":true,
-            "required":false,
-            "stored":false
-        },
-        {
-            "name": "characters_phonetic",
-            "type": "PhoneticNameTextField",
-            "multiValued": true,
-            "indexed": true,
-            "required": false,
-            "stored": false
         },
         {
             "name": "related_actors",
@@ -150,55 +83,12 @@
             "stored": true
         },
         {
-            "name":"related_actors_synonyms",
-            "type":"SynonymsNameTextField",
-            "multiValued":true,
-            "indexed":true,
-            "required":false,
-            "stored":false
-        },
-        {
-            "name": "related_actors_phonetic",
-            "type": "PhoneticNameTextField",
-            "multiValued": true,
-            "indexed": true,
-            "required": false,
-            "stored": false
-        },
-        {
             "name": "movies",
-            "type": "movieTitle",
+            "type": "GenericTextField",
             "multiValued": true,
             "indexed": true,
             "required": false,
             "stored": true  
-        }
-    ],
-
-    "add-copy-field": [
-        {
-            "source": "name",
-            "dest": "name_phonetic"
-        },
-        {
-            "source": "name",
-            "dest": "name_synonyms"
-        },
-        {
-            "source": "characters",
-            "dest": "characters_phonetic"
-        },
-        {
-            "source": "characters",
-            "dest": "characters_synonyms"
-        },
-        {
-            "source": "related_actors",
-            "dest": "related_actors_phonetic"
-        },
-        {
-            "source": "related_actors",
-            "dest": "related_actors_synonyms"
         }
     ]
 }

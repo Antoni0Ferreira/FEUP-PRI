@@ -1657,7 +1657,7 @@ deathblow,quietus,martyrdom
 butcher,slayer,murderer,Cain,assassin,terrorist,cutthroat,garroter,bravo,Thug,Moloch,matador,sabreur,guet,pens,gallows,eater,apache,Aceldama
 phthisozoics,sport,sporting,venery,hunting,coursing,shooting,fishing,pig
 sticking,sportsman,huntsman,fisherman,hunter,Nimrod,slaughterhouse,shambles,abattoir
-kill,slay,murder,assassinate,butcher,slaughter,victimize,immolate,massacre,despatch,dispatch,burke,settle,for
+kill,slay,murder,assassinate,butcher,slaughter,victimize,immolate,massacre
 garrote,hang,throttle,choke,stifle,suffocate,smother,asphyxiate,drown
 saber,jugulate,stab,bayonet,eviscerate,sword
 brain,stone,lapidate,grace
