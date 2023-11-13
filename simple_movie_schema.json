@@ -1,0 +1,124 @@
+{
+    "add-field-type" : [
+        {
+            "name":"GenericTextField",
+            "class":"solr.TextField",
+            "indexAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"}
+                ]
+            },
+            "queryAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"}
+                ]
+            }
+        },
+        {
+            "name": "GenericIntegerField",
+            "class": "solr.TrieIntField",
+            "precisionStep": 8
+
+        },
+        {
+            "name": "GenericFloatField",
+            "class": "solr.TrieFloatField"
+        },
+        {
+            "name": "URLTextField",
+            "class": "solr.TextField"
+        }
+        
+        
+    ],
+    "add-field": [
+        {
+            "name": "title",
+            "type": "GenericTextField",
+            "indexed": true,
+            "stored": true,
+            "multiValued": false,
+            "required": true
+        },
+        {
+            "name": "year",
+            "type": "GenericIntegerField",
+            "indexed": true,
+            "stored": true,
+            "multiValued": false,
+            "required": true
+        },
+        {
+            "name": "imdb_rating",
+            "type": "GenericIntegerField",
+            "indexed": true,
+            "stored": true,
+            "multiValued": false,
+            "required": true
+        },
+        {
+            "name": "imdb_votes",
+            "type": "GenericIntegerField",
+            "indexed": true,
+            "stored": true,
+            "multiValued": false,
+            "required": true
+        },
+        {
+            "name": "runtime",
+            "type": "GenericIntegerField",
+            "indexed": true,
+            "stored": true,
+            "multiValued": false,
+            "required": true
+        },
+        {
+            "name": "revenue",
+            "type": "GenericIntegerField",
+            "indexed": true,
+            "stored": true,
+            "multiValued": false,
+            "required": true
+        },
+        {
+            "name": "poster_path",
+            "type": "URLTextField",
+            "indexed": false,
+            "stored": true,
+            "multiValued": false,
+            "required": false
+        },
+        {
+            "name": "characters",
+            "type": "GenericTextField",
+            "indexed": true,
+            "stored": true,
+            "multiValued": true,
+            "required": false
+        },
+        {
+            "name": "genres",
+            "type": "GenericTextField",
+            "indexed": true,
+            "stored": true,
+            "multiValued": true,
+            "required": false
+        },
+        {
+            "name": "actors",
+            "type": "GenericTextField",
+            "indexed": true,
+            "stored": true,
+            "multiValued": true,
+            "required": false
+        }
+    ]
+}

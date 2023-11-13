@@ -67,7 +67,7 @@ curl -X POST -H 'Content-type:application/json' \
 docker exec moviehut_solr bin/solr create_core -c complex_conversations
 
 docker cp namesynonyms.txt moviehut_solr:/var/solr/data/complex_conversations/namesynonyms.txt
-docker cp synonyms.txt moviehut_solr:/var/solr/data/complex_conversations/synonyms.txt
+docker cp othersynonyms.txt moviehut_solr:/var/solr/data/complex_conversations/othersynonyms.txt
 
 curl -X POST -H 'Content-type:application/json' \
     --data-binary "@complex_conversation_schema.json" \

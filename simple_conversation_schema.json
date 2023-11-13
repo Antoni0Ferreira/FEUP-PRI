@@ -30,7 +30,6 @@
                     "class":"solr.StandardTokenizerFactory"
                 },
                 "filters":[
-                    {"class":"solr.NGramFilterFactory", "minGramSize":3, "maxGramSize":15, "preserveOriginal":true},
                     {"class": "solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
                     {"class": "solr.LowerCaseFilterFactory"}
                 ]
@@ -40,7 +39,6 @@
                     "class":"solr.StandardTokenizerFactory"
                 },
                 "filters":[
-                    {"class":"solr.NGramFilterFactory", "minGramSize":3, "maxGramSize":15, "preserveOriginal":true},
                     {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
                     {"class":"solr.LowerCaseFilterFactory"}
                 ]
