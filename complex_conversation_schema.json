@@ -3,20 +3,7 @@
         {
             "name":"GenericTextField",
             "class":"solr.TextField",
-            "indexAnalyzer":{
-                "tokenizer":{
-                    "class":"solr.StandardTokenizerFactory"
-                },
-                "filters":[
-                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
-                    {"class":"solr.LowerCaseFilterFactory"},
-                    {"class":"solr.EnglishMinimalStemFilterFactory"},
-                    {"class": "solr.SynonymGraphFilterFactory",  "ignoreCase":true, "synonyms":"othersynonyms.txt", "expand":true},
-                    {"class": "solr.FlattenGraphFilterFactory"}
-
-                ]
-            },
-            "queryAnalyzer":{
+            "analyzer":{
                 "tokenizer":{
                     "class":"solr.StandardTokenizerFactory"
                 },
@@ -32,25 +19,14 @@
         {
             "name": "NameTextField",
             "class" : "solr.TextField",
-            "indexAnalyzer":{
+            "analyzer":{
                 "tokenizer":{
                     "class":"solr.StandardTokenizerFactory"
                 },
                 "filters":[
                     {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
                     {"class":"solr.LowerCaseFilterFactory"},
-                    {"class":"solr.SynonymGraphFilterFactory",  "ignoreCase":"true", "synonyms":"namesynonyms.txt", "expand":false},
-                    {"class":"solr.FlattenGraphFilterFactory"}
-                ]
-            },
-            "queryAnalyzer":{
-                "tokenizer":{
-                    "class":"solr.StandardTokenizerFactory"
-                },
-                "filters":[
-                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
-                    {"class":"solr.LowerCaseFilterFactory"},
-                    {"class":"solr.SynonymGraphFilterFactory",  "ignoreCase":"true", "synonyms":"namesynonyms.txt", "expand":false},
+                    {"class":"solr.SynonymGraphFilterFactory",  "ignoreCase":"true", "synonyms":"namesynonyms.txt", "expand":true},
                     {"class":"solr.FlattenGraphFilterFactory"}
                 ]
             }
