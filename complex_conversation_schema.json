@@ -10,7 +10,7 @@
                 "filters":[
                     {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
                     {"class":"solr.LowerCaseFilterFactory"},
-                    {"class":"solr.EnglishMinimalStemFilterFactory"},
+                    {"class":"solr.SnowballPorterFilterFactory"},
                     {"class": "solr.SynonymGraphFilterFactory",  "ignoreCase":true, "synonyms":"othersynonyms.txt", "expand":true},
                     {"class": "solr.FlattenGraphFilterFactory"}
                 ]
@@ -32,9 +32,10 @@
             }
         },
         {
-            "name": "dialogueId",
+            "name": "GenericIntegerField",
             "class": "solr.TrieIntField",
             "precisionStep": 8
+
         }
     ],
     
@@ -95,7 +96,7 @@
 
         {
             "name": "previous_dialogue",
-            "type": "dialogueId",
+            "type": "GenericIntegerField",
             "indexed": false,
             "stored": true,
             "multiValued": false,
@@ -103,7 +104,7 @@
         },
         {
             "name": "next_dialogue",
-            "type": "dialogueId",
+            "type": "GenericIntegerField",
             "indexed": false,
             "stored": true,
             "multiValued": false,
@@ -119,8 +120,24 @@
             "required": false
         },
         {
+            "name": "transcript",
+            "type": "GenericTextField",
+            "indexed": true,
+            "stored": true,
+            "multiValued": false,
+            "required": false
+        },
+        {
             "name": "content_type",
             "type": "string",
+            "indexed": true,
+            "stored": true,
+            "multiValued": false,
+            "required": false
+        },
+        {
+            "name": "year",
+            "type": "GenericIntegerField",
             "indexed": true,
             "stored": true,
             "multiValued": false,

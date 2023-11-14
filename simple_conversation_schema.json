@@ -45,9 +45,10 @@
             }
         },
         {
-            "name": "dialogueId",
+            "name": "GenericIntegerField",
             "class": "solr.TrieIntField",
             "precisionStep": 8
+
         }
     ],
     
@@ -102,7 +103,7 @@
         },
         {
             "name": "previous_dialogue",
-            "type": "dialogueId",
+            "type": "GenericIntegerField",
             "indexed": false,
             "stored": true,
             "multiValued": false,
@@ -110,7 +111,7 @@
         },
         {
             "name": "next_dialogue",
-            "type": "dialogueId",
+            "type": "GenericIntegerField",
             "indexed": false,
             "stored": true,
             "multiValued": false,
@@ -125,8 +126,24 @@
             "required": false
         },
         {
+            "name": "transcript",
+            "type": "GenericTextField",
+            "indexed": true,
+            "stored": true,
+            "multiValued": false,
+            "required": false
+        },
+        {
             "name": "content_type",
             "type": "string",
+            "indexed": true,
+            "stored": true,
+            "multiValued": false,
+            "required": false
+        },
+        {
+            "name": "year",
+            "type": "GenericIntegerField",
             "indexed": true,
             "stored": true,
             "multiValued": false,
