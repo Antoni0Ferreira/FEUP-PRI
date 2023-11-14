@@ -5574,7 +5574,7 @@ detect, observe, find, discover, notice
 development, evolution
 deviation, divergence, departure, difference
 dictionary, lexicon
-die, decease, perish, go, exit, pass away, expire, pass, kick the bucket, cash in one's chips, buy the farm, conk, give-up the ghost, drop dead, pop off, choke, croak, snuff it
+die, decease, perish, exit, pass away, expire, pass, kick the bucket, cash in one's chips, buy the farm, conk, give-up the ghost, drop dead, pop off, choke, croak, snuff it
 difficult, hard
 directly, straight, direct
 director, manager, managing director
@@ -6222,7 +6222,7 @@ supply, provide, render, furnish
 support, back up
 surely, certainly, sure, for sure, for certain, sure enough, sure as shooting
 surrender, give up
-survive, last, live, live on, go, endure, hold up, hold out
+survive, last, live, live on, endure, hold up, hold out
 sweet, sweetness, sugariness
 sympathize, sympathise, empathize, empathise, understand
 system, scheme
