@@ -1,0 +1,3276 @@
+{
+    "id": 4671,
+    "characters": [
+        "ALICE",
+        "MRS. JORDAN"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Lisa Wilcox",
+        "Valorie Armstrong"
+    ],
+    "transcript": "It's okay DanExcuse us dear.",
+    "previous_dialogue": 4666,
+    "next_dialogue": 4674,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8420",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "It's okay Dan"
+        },
+        {
+            "id": "L8419",
+            "character": "MRS. JORDAN",
+            "actor": "Valorie Armstrong",
+            "text": "Excuse us dear."
+        }
+    ]
+},
+{
+    "id": 4674,
+    "characters": [
+        "ALICE",
+        "MRS. JORDAN"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Lisa Wilcox",
+        "Valorie Armstrong"
+    ],
+    "transcript": "What I what?  Well I've thought about it.  I plan to keep him.Frankly dear we wondered what you intend to do with our baby?",
+    "previous_dialogue": 4671,
+    "next_dialogue": 4677,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8718",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "What I what?  Well I've thought about it.  I plan to keep him."
+        },
+        {
+            "id": "L8717",
+            "character": "MRS. JORDAN",
+            "actor": "Valorie Armstrong",
+            "text": "Frankly dear we wondered what you intend to do with our baby?"
+        }
+    ]
+},
+{
+    "id": 4677,
+    "characters": [
+        "ALICE",
+        "MRS. JORDAN"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Valorie Armstrong",
+        "Lisa Wilcox"
+    ],
+    "transcript": "And ours.  It's our grandchild.Look I appreciate what you're offering but no.  He is my responsibility.",
+    "previous_dialogue": 4674,
+    "next_dialogue": 4680,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8722",
+            "character": "MRS. JORDAN",
+            "actor": "Valorie Armstrong",
+            "text": "And ours.  It's our grandchild."
+        },
+        {
+            "id": "L8721",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "Look I appreciate what you're offering but no.  He is my responsibility."
+        }
+    ]
+},
+{
+    "id": 4680,
+    "characters": [
+        "ALICE",
+        "MRS. JORDAN"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Lisa Wilcox",
+        "Valorie Armstrong"
+    ],
+    "transcript": "What are you talking about?  My \"condition\"?...In your present condition Alice we're worried about your ability --",
+    "previous_dialogue": 4677,
+    "next_dialogue": 4683,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8725",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "What are you talking about?  My \"condition\"?..."
+        },
+        {
+            "id": "L8724",
+            "character": "MRS. JORDAN",
+            "actor": "Valorie Armstrong",
+            "text": "In your present condition Alice we're worried about your ability --"
+        }
+    ]
+},
+{
+    "id": 4683,
+    "characters": [
+        "ALICE",
+        "MRS. JORDAN"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Lisa Wilcox",
+        "Valorie Armstrong"
+    ],
+    "transcript": "You're not taking my baby!We know you've been through a lot but there's more than your feelings at stake here.",
+    "previous_dialogue": 4680,
+    "next_dialogue": 4686,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8729",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "You're not taking my baby!"
+        },
+        {
+            "id": "L8728",
+            "character": "MRS. JORDAN",
+            "actor": "Valorie Armstrong",
+            "text": "We know you've been through a lot but there's more than your feelings at stake here."
+        }
+    ]
+},
+{
+    "id": 4686,
+    "characters": [
+        "ALICE",
+        "JACOB"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Lisa Wilcox",
+        "Whit Hertford"
+    ],
+    "transcript": "Huh?Hey...wake up.",
+    "previous_dialogue": 4683,
+    "next_dialogue": 4689,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8536",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "Huh?"
+        },
+        {
+            "id": "L8535",
+            "character": "JACOB",
+            "actor": "Whit Hertford",
+            "text": "Hey...wake up."
+        }
+    ]
+},
+{
+    "id": 4689,
+    "characters": [
+        "ALICE",
+        "JACOB"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Lisa Wilcox",
+        "Whit Hertford"
+    ],
+    "transcript": "My name is...It's lonely in there in my room.Shouldn't you be in your room Jacob?",
+    "previous_dialogue": 4686,
+    "next_dialogue": 4693,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8540",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "My name is..."
+        },
+        {
+            "id": "L8539",
+            "character": "JACOB",
+            "actor": "Whit Hertford",
+            "text": "It's lonely in there in my room."
+        },
+        {
+            "id": "L8538",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "Shouldn't you be in your room Jacob?"
+        }
+    ]
+},
+{
+    "id": 4693,
+    "characters": [
+        "ALICE",
+        "JACOB"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Whit Hertford",
+        "Lisa Wilcox"
+    ],
+    "transcript": "I could tell you were sad.  I just wanted to see if you were all right.How did you know that?I'm sorry your boyfriend got killed.",
+    "previous_dialogue": 4689,
+    "next_dialogue": 4697,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8543",
+            "character": "JACOB",
+            "actor": "Whit Hertford",
+            "text": "I could tell you were sad.  I just wanted to see if you were all right."
+        },
+        {
+            "id": "L8542",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "How did you know that?"
+        },
+        {
+            "id": "L8541",
+            "character": "JACOB",
+            "actor": "Whit Hertford",
+            "text": "I'm sorry your boyfriend got killed."
+        }
+    ]
+},
+{
+    "id": 4697,
+    "characters": [
+        "ALICE",
+        "JACOB"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Whit Hertford",
+        "Lisa Wilcox"
+    ],
+    "transcript": "Been having bad dreams.Hi you don't look very well.  Are you feeling all right?",
+    "previous_dialogue": 4693,
+    "next_dialogue": 4700,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8645",
+            "character": "JACOB",
+            "actor": "Whit Hertford",
+            "text": "Been having bad dreams."
+        },
+        {
+            "id": "L8644",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "Hi you don't look very well.  Are you feeling all right?"
+        }
+    ]
+},
+{
+    "id": 4700,
+    "characters": [
+        "ALICE",
+        "JACOB"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Whit Hertford",
+        "Lisa Wilcox"
+    ],
+    "transcript": "No...Is that who you're waiting for?",
+    "previous_dialogue": 4697,
+    "next_dialogue": 4703,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8649",
+            "character": "JACOB",
+            "actor": "Whit Hertford",
+            "text": "No..."
+        },
+        {
+            "id": "L8648",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "Is that who you're waiting for?"
+        }
+    ]
+},
+{
+    "id": 4703,
+    "characters": [
+        "ALICE",
+        "JACOB"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Lisa Wilcox",
+        "Whit Hertford"
+    ],
+    "transcript": "Oh...I'm sure that's not true.  I'll bet she's very worried about you.  I would be.She doesn't want me aroundI don't think this is a nice place for you to be.  Maybe we should go find your Mom.",
+    "previous_dialogue": 4700,
+    "next_dialogue": 4707,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8652",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "Oh...I'm sure that's not true.  I'll bet she's very worried about you.  I would be."
+        },
+        {
+            "id": "L8651",
+            "character": "JACOB",
+            "actor": "Whit Hertford",
+            "text": "She doesn't want me around"
+        },
+        {
+            "id": "L8650",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "I don't think this is a nice place for you to be.  Maybe we should go find your Mom."
+        }
+    ]
+},
+{
+    "id": 4707,
+    "characters": [
+        "ALICE",
+        "JACOB"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Lisa Wilcox",
+        "Whit Hertford"
+    ],
+    "transcript": "Who said I...wait what?No you're not.  You don't even care about being a mom.  How come you don't think about me?",
+    "previous_dialogue": 4703,
+    "next_dialogue": 4710,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8654",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "Who said I...wait what?"
+        },
+        {
+            "id": "L8653",
+            "character": "JACOB",
+            "actor": "Whit Hertford",
+            "text": "No you're not.  You don't even care about being a mom.  How come you don't think about me?"
+        }
+    ]
+},
+{
+    "id": 4710,
+    "characters": [
+        "ALICE",
+        "JACOB"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Whit Hertford",
+        "Lisa Wilcox"
+    ],
+    "transcript": "My friend with the funny hand.Who says I don't like you?",
+    "previous_dialogue": 4707,
+    "next_dialogue": 4713,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8657",
+            "character": "JACOB",
+            "actor": "Whit Hertford",
+            "text": "My friend with the funny hand."
+        },
+        {
+            "id": "L8656",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "Who says I don't like you?"
+        }
+    ]
+},
+{
+    "id": 4713,
+    "characters": [
+        "ALICE",
+        "JACOB"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Lisa Wilcox",
+        "Whit Hertford"
+    ],
+    "transcript": "Come on downstairs.  He won't hurt you. He needs us both.Mommy...?",
+    "previous_dialogue": 4710,
+    "next_dialogue": 4716,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8793",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "Come on downstairs.  He won't hurt you. He needs us both."
+        },
+        {
+            "id": "L8792",
+            "character": "JACOB",
+            "actor": "Whit Hertford",
+            "text": "Mommy...?"
+        }
+    ]
+},
+{
+    "id": 4716,
+    "characters": [
+        "ALICE",
+        "JACOB"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Whit Hertford",
+        "Lisa Wilcox"
+    ],
+    "transcript": "He's inside you where he hides.Where is he?",
+    "previous_dialogue": 4713,
+    "next_dialogue": 4719,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8802",
+            "character": "JACOB",
+            "actor": "Whit Hertford",
+            "text": "He's inside you where he hides."
+        },
+        {
+            "id": "L8801",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "Where is he?"
+        }
+    ]
+},
+{
+    "id": 4719,
+    "characters": [
+        "ALICE",
+        "JACOB"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Whit Hertford",
+        "Lisa Wilcox"
+    ],
+    "transcript": "It's where he hides out.  Inside.  That's how he found me.What do you mean?",
+    "previous_dialogue": 4716,
+    "next_dialogue": 4722,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8804",
+            "character": "JACOB",
+            "actor": "Whit Hertford",
+            "text": "It's where he hides out.  Inside.  That's how he found me."
+        },
+        {
+            "id": "L8803",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "What do you mean?"
+        }
+    ]
+},
+{
+    "id": 4722,
+    "characters": [
+        "ALICE",
+        "JACOB"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Whit Hertford",
+        "Lisa Wilcox"
+    ],
+    "transcript": "He says it's easy.  Especially with sad people.  With closed-off people.But how...?",
+    "previous_dialogue": 4719,
+    "next_dialogue": 4725,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8806",
+            "character": "JACOB",
+            "actor": "Whit Hertford",
+            "text": "He says it's easy.  Especially with sad people.  With closed-off people."
+        },
+        {
+            "id": "L8805",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "But how...?"
+        }
+    ]
+},
+{
+    "id": 4725,
+    "characters": [
+        "ALICE",
+        "DAN"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Burr DeBenning",
+        "Lisa Wilcox"
+    ],
+    "transcript": "Sorry babe.Jesus!  Don't do that!Hi beautiful.",
+    "previous_dialogue": 4722,
+    "next_dialogue": 4729,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8397",
+            "character": "DAN",
+            "actor": "Burr DeBenning",
+            "text": "Sorry babe."
+        },
+        {
+            "id": "L8396",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "Jesus!  Don't do that!"
+        },
+        {
+            "id": "L8395",
+            "character": "DAN",
+            "actor": "Burr DeBenning",
+            "text": "Hi beautiful."
+        }
+    ]
+},
+{
+    "id": 4729,
+    "characters": [
+        "ALICE",
+        "DAN"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Lisa Wilcox",
+        "Burr DeBenning"
+    ],
+    "transcript": "I know.They're coach seats but the plane lands in Paris.  It's gonna be a helluva summer hon!The tickets.",
+    "previous_dialogue": 4725,
+    "next_dialogue": 4733,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8402",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "I know."
+        },
+        {
+            "id": "L8401",
+            "character": "DAN",
+            "actor": "Burr DeBenning",
+            "text": "They're coach seats but the plane lands in Paris.  It's gonna be a helluva summer hon!"
+        },
+        {
+            "id": "L8400",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "The tickets."
+        }
+    ]
+},
+{
+    "id": 4733,
+    "characters": [
+        "ALICE",
+        "DAN"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Burr DeBenning",
+        "Lisa Wilcox"
+    ],
+    "transcript": "He'll show up.  C'mon what's really wrong?Nothing...it's just...I didn't see my father at the ceremony.Okay babe.  What's the matter?",
+    "previous_dialogue": 4729,
+    "next_dialogue": 4737,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8405",
+            "character": "DAN",
+            "actor": "Burr DeBenning",
+            "text": "He'll show up.  C'mon what's really wrong?"
+        },
+        {
+            "id": "L8404",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "Nothing...it's just...I didn't see my father at the ceremony."
+        },
+        {
+            "id": "L8403",
+            "character": "DAN",
+            "actor": "Burr DeBenning",
+            "text": "Okay babe.  What's the matter?"
+        }
+    ]
+},
+{
+    "id": 4737,
+    "characters": [
+        "ALICE",
+        "DAN"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Lisa Wilcox",
+        "Burr DeBenning"
+    ],
+    "transcript": "No.  Well not exactly...it's that...I felt like I wasn't in control.  For the first time since...all that.  I'm scared.About him?",
+    "previous_dialogue": 4733,
+    "next_dialogue": 4740,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8408",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "No.  Well not exactly...it's that...I felt like I wasn't in control.  For the first time since...all that.  I'm scared."
+        },
+        {
+            "id": "L8407",
+            "character": "DAN",
+            "actor": "Burr DeBenning",
+            "text": "About him?"
+        }
+    ]
+},
+{
+    "id": 4740,
+    "characters": [
+        "ALICE",
+        "DAN"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Lisa Wilcox",
+        "Burr DeBenning"
+    ],
+    "transcript": "Me too.There you go.  Love you.You're right.You don't dream him up he can't hurt you.  Or me.  Or us.  Remember...Yeah...I guess.You stopped it didn't you?  It was probably just a regular bad dream.",
+    "previous_dialogue": 4737,
+    "next_dialogue": 4747,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8414",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "Me too."
+        },
+        {
+            "id": "L8413",
+            "character": "DAN",
+            "actor": "Burr DeBenning",
+            "text": "There you go.  Love you."
+        },
+        {
+            "id": "L8412",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "You're right."
+        },
+        {
+            "id": "L8411",
+            "character": "DAN",
+            "actor": "Burr DeBenning",
+            "text": "You don't dream him up he can't hurt you.  Or me.  Or us.  Remember..."
+        },
+        {
+            "id": "L8410",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "Yeah...I guess."
+        },
+        {
+            "id": "L8409",
+            "character": "DAN",
+            "actor": "Burr DeBenning",
+            "text": "You stopped it didn't you?  It was probably just a regular bad dream."
+        }
+    ]
+},
+{
+    "id": 4747,
+    "characters": [
+        "ALICE",
+        "ALICE'S DAD"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "",
+        "Lisa Wilcox"
+    ],
+    "transcript": "I watched from behind the stands.  Didn't want to embarrass you ya know.  \"The drunk showed up\" that kind of thing...No.  A deal's a deal.That's in the past.  Unless you've stopped going to the meetings.I was afraid you weren't coming.",
+    "previous_dialogue": 4740,
+    "next_dialogue": 4752,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8440",
+            "character": "ALICE'S DAD",
+            "actor": "",
+            "text": "I watched from behind the stands.  Didn't want to embarrass you ya know.  \"The drunk showed up\" that kind of thing..."
+        },
+        {
+            "id": "L8442",
+            "character": "ALICE'S DAD",
+            "actor": "",
+            "text": "No.  A deal's a deal."
+        },
+        {
+            "id": "L8441",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "That's in the past.  Unless you've stopped going to the meetings."
+        },
+        {
+            "id": "L8439",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "I was afraid you weren't coming."
+        }
+    ]
+},
+{
+    "id": 4752,
+    "characters": [
+        "ALICE",
+        "ALICE'S DAD"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "",
+        "Lisa Wilcox"
+    ],
+    "transcript": "It's the model you've been saving up for. I wanted you to have it for your trip.Dad!",
+    "previous_dialogue": 4747,
+    "next_dialogue": 4755,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8444",
+            "character": "ALICE'S DAD",
+            "actor": "",
+            "text": "It's the model you've been saving up for. I wanted you to have it for your trip."
+        },
+        {
+            "id": "L8443",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "Dad!"
+        }
+    ]
+},
+{
+    "id": 4755,
+    "characters": [
+        "ALICE",
+        "ALICE'S DAD"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Lisa Wilcox",
+        ""
+    ],
+    "transcript": "To take a picture.Where are we going?",
+    "previous_dialogue": 4752,
+    "next_dialogue": 4758,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8447",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "To take a picture."
+        },
+        {
+            "id": "L8446",
+            "character": "ALICE'S DAD",
+            "actor": "",
+            "text": "Where are we going?"
+        }
+    ]
+},
+{
+    "id": 4758,
+    "characters": [
+        "ALICE",
+        "ALICE'S DAD"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Lisa Wilcox",
+        ""
+    ],
+    "transcript": "It's just across the park.You sure you don't want a ride to work?Thanks for everything Dad.",
+    "previous_dialogue": 4755,
+    "next_dialogue": 4762,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8451",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "It's just across the park."
+        },
+        {
+            "id": "L8450",
+            "character": "ALICE'S DAD",
+            "actor": "",
+            "text": "You sure you don't want a ride to work?"
+        },
+        {
+            "id": "L8449",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "Thanks for everything Dad."
+        }
+    ]
+},
+{
+    "id": 4762,
+    "characters": [
+        "ALICE",
+        "ALICE'S DAD"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Lisa Wilcox",
+        ""
+    ],
+    "transcript": "Daddy he's coming back...Krueger's coming back.  Make them understand.I'm so sorry honey...",
+    "previous_dialogue": 4758,
+    "next_dialogue": 4765,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8525",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "Daddy he's coming back...Krueger's coming back.  Make them understand."
+        },
+        {
+            "id": "L8524",
+            "character": "ALICE'S DAD",
+            "actor": "",
+            "text": "I'm so sorry honey..."
+        }
+    ]
+},
+{
+    "id": 4765,
+    "characters": [
+        "ALICE",
+        "ALICE'S DAD"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "",
+        "Lisa Wilcox"
+    ],
+    "transcript": "No I'm not.  I sort of hope it's a boy. Be nice to have a boy playing in the house again.You disappointed in me?Since my little girl became a mom...Since when are you such a smart shopper?Alice...Very funny.Sobering...How was the meeting?",
+    "previous_dialogue": 4762,
+    "next_dialogue": 4774,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8580",
+            "character": "ALICE'S DAD",
+            "actor": "",
+            "text": "No I'm not.  I sort of hope it's a boy. Be nice to have a boy playing in the house again."
+        },
+        {
+            "id": "L8579",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "You disappointed in me?"
+        },
+        {
+            "id": "L8578",
+            "character": "ALICE'S DAD",
+            "actor": "",
+            "text": "Since my little girl became a mom..."
+        },
+        {
+            "id": "L8577",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "Since when are you such a smart shopper?"
+        },
+        {
+            "id": "L8576",
+            "character": "ALICE'S DAD",
+            "actor": "",
+            "text": "Alice..."
+        },
+        {
+            "id": "L8575",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "Very funny."
+        },
+        {
+            "id": "L8574",
+            "character": "ALICE'S DAD",
+            "actor": "",
+            "text": "Sobering..."
+        },
+        {
+            "id": "L8573",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "How was the meeting?"
+        }
+    ]
+},
+{
+    "id": 4774,
+    "characters": [
+        "ALICE",
+        "ALICE'S DAD"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "",
+        "Lisa Wilcox"
+    ],
+    "transcript": "Now.But Dad --No!  I won't have you running around in the middle of the night.  You're coming home.I've got to go.Alice!",
+    "previous_dialogue": 4765,
+    "next_dialogue": 4780,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8783",
+            "character": "ALICE'S DAD",
+            "actor": "",
+            "text": "Now."
+        },
+        {
+            "id": "L8782",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "But Dad --"
+        },
+        {
+            "id": "L8781",
+            "character": "ALICE'S DAD",
+            "actor": "",
+            "text": "No!  I won't have you running around in the middle of the night.  You're coming home."
+        },
+        {
+            "id": "L8780",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "I've got to go."
+        },
+        {
+            "id": "L8779",
+            "character": "ALICE'S DAD",
+            "actor": "",
+            "text": "Alice!"
+        }
+    ]
+},
+{
+    "id": 4780,
+    "characters": [
+        "ALICE",
+        "YVONNE"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Lisa Wilcox",
+        "Kelly Jo Minter"
+    ],
+    "transcript": "No the Dan part was nice...Dan keeping you up again?  Put a lock on that window girl.Had kind of a long night.Hey what's wrong with you -- let's see a smile.",
+    "previous_dialogue": 4774,
+    "next_dialogue": 4785,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8365",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "No the Dan part was nice..."
+        },
+        {
+            "id": "L8364",
+            "character": "YVONNE",
+            "actor": "Kelly Jo Minter",
+            "text": "Dan keeping you up again?  Put a lock on that window girl."
+        },
+        {
+            "id": "L8363",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "Had kind of a long night."
+        },
+        {
+            "id": "L8362",
+            "character": "YVONNE",
+            "actor": "Kelly Jo Minter",
+            "text": "Hey what's wrong with you -- let's see a smile."
+        }
+    ]
+},
+{
+    "id": 4785,
+    "characters": [
+        "ALICE",
+        "YVONNE"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Kelly Jo Minter",
+        "Lisa Wilcox"
+    ],
+    "transcript": "Yeah before they revoke his diploma.Good to see you again Mr. Grey.  I've got to go find Dan.",
+    "previous_dialogue": 4780,
+    "next_dialogue": 4788,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8394",
+            "character": "YVONNE",
+            "actor": "Kelly Jo Minter",
+            "text": "Yeah before they revoke his diploma."
+        },
+        {
+            "id": "L8393",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "Good to see you again Mr. Grey.  I've got to go find Dan."
+        }
+    ]
+},
+{
+    "id": 4788,
+    "characters": [
+        "ALICE",
+        "YVONNE"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Kelly Jo Minter",
+        "Lisa Wilcox"
+    ],
+    "transcript": "Alice it's no dream.  I'm sorry...Dan's dead.It was no accident.  It was Krueger.  He used to get in through my dreams but not anymore.  He's found some other way.",
+    "previous_dialogue": 4785,
+    "next_dialogue": 4791,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8523",
+            "character": "YVONNE",
+            "actor": "Kelly Jo Minter",
+            "text": "Alice it's no dream.  I'm sorry...Dan's dead."
+        },
+        {
+            "id": "L8522",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "It was no accident.  It was Krueger.  He used to get in through my dreams but not anymore.  He's found some other way."
+        }
+    ]
+},
+{
+    "id": 4791,
+    "characters": [
+        "ALICE",
+        "YVONNE"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Lisa Wilcox",
+        "Kelly Jo Minter"
+    ],
+    "transcript": "He must've wandered up from the children's ward.  I just wondered what was wrong with him.There aren't any little boys on your floor.Have you visited the little boy on my floor?  Jacob the one who looks kind of sad?",
+    "previous_dialogue": 4788,
+    "next_dialogue": 4795,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8547",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "He must've wandered up from the children's ward.  I just wondered what was wrong with him."
+        },
+        {
+            "id": "L8546",
+            "character": "YVONNE",
+            "actor": "Kelly Jo Minter",
+            "text": "There aren't any little boys on your floor."
+        },
+        {
+            "id": "L8545",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "Have you visited the little boy on my floor?  Jacob the one who looks kind of sad?"
+        }
+    ]
+},
+{
+    "id": 4795,
+    "characters": [
+        "ALICE",
+        "YVONNE"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Kelly Jo Minter",
+        "Lisa Wilcox"
+    ],
+    "transcript": "They're waiting for us...but let's keep this dream stuff between you and me.Did everyone call everyone?",
+    "previous_dialogue": 4791,
+    "next_dialogue": 4798,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8552",
+            "character": "YVONNE",
+            "actor": "Kelly Jo Minter",
+            "text": "They're waiting for us...but let's keep this dream stuff between you and me."
+        },
+        {
+            "id": "L8551",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "Did everyone call everyone?"
+        }
+    ]
+},
+{
+    "id": 4798,
+    "characters": [
+        "ALICE",
+        "YVONNE"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Kelly Jo Minter",
+        "Lisa Wilcox"
+    ],
+    "transcript": "When Dan died you weren't even asleep. You said so.  End of story.What's that got to do with it?",
+    "previous_dialogue": 4795,
+    "next_dialogue": 4801,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8565",
+            "character": "YVONNE",
+            "actor": "Kelly Jo Minter",
+            "text": "When Dan died you weren't even asleep. You said so.  End of story."
+        },
+        {
+            "id": "L8564",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "What's that got to do with it?"
+        }
+    ]
+},
+{
+    "id": 4801,
+    "characters": [
+        "ALICE",
+        "YVONNE"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Lisa Wilcox",
+        "Kelly Jo Minter"
+    ],
+    "transcript": "No accident.  I tried to warn all of you about Krueger.It was just an accident.  Like with Dan.",
+    "previous_dialogue": 4798,
+    "next_dialogue": 4804,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8614",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "No accident.  I tried to warn all of you about Krueger."
+        },
+        {
+            "id": "L8613",
+            "character": "YVONNE",
+            "actor": "Kelly Jo Minter",
+            "text": "It was just an accident.  Like with Dan."
+        }
+    ]
+},
+{
+    "id": 4804,
+    "characters": [
+        "ALICE",
+        "YVONNE"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Kelly Jo Minter",
+        "Lisa Wilcox"
+    ],
+    "transcript": "Why don't you two stick to reality.I don't understand what's happening. Krueger has to use my dreams but he got to Dan and Greta while I was awake. How's he doing it?",
+    "previous_dialogue": 4801,
+    "next_dialogue": 4807,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8621",
+            "character": "YVONNE",
+            "actor": "Kelly Jo Minter",
+            "text": "Why don't you two stick to reality."
+        },
+        {
+            "id": "L8620",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "I don't understand what's happening. Krueger has to use my dreams but he got to Dan and Greta while I was awake. How's he doing it?"
+        }
+    ]
+},
+{
+    "id": 4807,
+    "characters": [
+        "ALICE",
+        "YVONNE"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Lisa Wilcox",
+        "Kelly Jo Minter"
+    ],
+    "transcript": "I think Krueger's trying to do something to it.You had me scared on the phone.  What's wrong with the baby?",
+    "previous_dialogue": 4804,
+    "next_dialogue": 4810,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8673",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "I think Krueger's trying to do something to it."
+        },
+        {
+            "id": "L8672",
+            "character": "YVONNE",
+            "actor": "Kelly Jo Minter",
+            "text": "You had me scared on the phone.  What's wrong with the baby?"
+        }
+    ]
+},
+{
+    "id": 4810,
+    "characters": [
+        "ALICE",
+        "YVONNE"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Lisa Wilcox",
+        "Kelly Jo Minter"
+    ],
+    "transcript": "Mark knows I'm not crazy.  Ask him to show you his hands.Oh Alice...no.  Honey I love you but you're going to have to get a hold of yourself...",
+    "previous_dialogue": 4807,
+    "next_dialogue": 4813,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8675",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "Mark knows I'm not crazy.  Ask him to show you his hands."
+        },
+        {
+            "id": "L8674",
+            "character": "YVONNE",
+            "actor": "Kelly Jo Minter",
+            "text": "Oh Alice...no.  Honey I love you but you're going to have to get a hold of yourself..."
+        }
+    ]
+},
+{
+    "id": 4813,
+    "characters": [
+        "ALICE",
+        "YVONNE"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Lisa Wilcox",
+        "Kelly Jo Minter"
+    ],
+    "transcript": "I just can't figure out how he's getting in when I'm awake...I really think you need to calm down now okay?",
+    "previous_dialogue": 4810,
+    "next_dialogue": 4816,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8677",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "I just can't figure out how he's getting in when I'm awake..."
+        },
+        {
+            "id": "L8676",
+            "character": "YVONNE",
+            "actor": "Kelly Jo Minter",
+            "text": "I really think you need to calm down now okay?"
+        }
+    ]
+},
+{
+    "id": 4816,
+    "characters": [
+        "ALICE",
+        "YVONNE"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Lisa Wilcox",
+        "Kelly Jo Minter"
+    ],
+    "transcript": "What do you think I'm doing?  Look.  Whether you believe it or not Krueger is back.  He's after the baby and if I don't try to do something about it who will??And so is your baby.  You've got more than just yourself to think of now!Krueger is reality.I am your friend and I'm worried sick about you.  But you're like a locked safe.  You've gotta start dealing with reality.",
+    "previous_dialogue": 4813,
+    "next_dialogue": 4821,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8698",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "What do you think I'm doing?  Look.  Whether you believe it or not Krueger is back.  He's after the baby and if I don't try to do something about it who will??"
+        },
+        {
+            "id": "L8697",
+            "character": "YVONNE",
+            "actor": "Kelly Jo Minter",
+            "text": "And so is your baby.  You've got more than just yourself to think of now!"
+        },
+        {
+            "id": "L8696",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "Krueger is reality."
+        },
+        {
+            "id": "L8695",
+            "character": "YVONNE",
+            "actor": "Kelly Jo Minter",
+            "text": "I am your friend and I'm worried sick about you.  But you're like a locked safe.  You've gotta start dealing with reality."
+        }
+    ]
+},
+{
+    "id": 4821,
+    "characters": [
+        "ALICE",
+        "YVONNE"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Lisa Wilcox",
+        "Kelly Jo Minter"
+    ],
+    "transcript": "Goddamn it Yvonne!  You don't just run away from this guy!  He finds you in your dreams.All I know is that you are not doing yourself or the baby any good by acting like a crazy woman.  Why don't you take off - leave Springwood and cool out somewhere for a while?",
+    "previous_dialogue": 4816,
+    "next_dialogue": 4824,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8700",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "Goddamn it Yvonne!  You don't just run away from this guy!  He finds you in your dreams."
+        },
+        {
+            "id": "L8699",
+            "character": "YVONNE",
+            "actor": "Kelly Jo Minter",
+            "text": "All I know is that you are not doing yourself or the baby any good by acting like a crazy woman.  Why don't you take off - leave Springwood and cool out somewhere for a while?"
+        }
+    ]
+},
+{
+    "id": 4824,
+    "characters": [
+        "ALICE",
+        "YVONNE"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Lisa Wilcox",
+        "Kelly Jo Minter"
+    ],
+    "transcript": "That's the only reason you're alive...Look...we're all tired.  None of us had any sleep since Friday night...",
+    "previous_dialogue": 4821,
+    "next_dialogue": 4827,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8705",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "That's the only reason you're alive..."
+        },
+        {
+            "id": "L8704",
+            "character": "YVONNE",
+            "actor": "Kelly Jo Minter",
+            "text": "Look...we're all tired.  None of us had any sleep since Friday night..."
+        }
+    ]
+},
+{
+    "id": 4827,
+    "characters": [
+        "ALICE",
+        "YVONNE"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Kelly Jo Minter",
+        "Lisa Wilcox"
+    ],
+    "transcript": "Yeah...So that's him.  And you're not crazy.Are you alright?",
+    "previous_dialogue": 4824,
+    "next_dialogue": 4830,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8760",
+            "character": "YVONNE",
+            "actor": "Kelly Jo Minter",
+            "text": "Yeah...So that's him.  And you're not crazy."
+        },
+        {
+            "id": "L8759",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "Are you alright?"
+        }
+    ]
+},
+{
+    "id": 4830,
+    "characters": [
+        "ALICE",
+        "YVONNE"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Lisa Wilcox",
+        "Kelly Jo Minter"
+    ],
+    "transcript": "If they actually bothered to bury her.You think that's the place she's buried?",
+    "previous_dialogue": 4827,
+    "next_dialogue": 4833,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8770",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "If they actually bothered to bury her."
+        },
+        {
+            "id": "L8769",
+            "character": "YVONNE",
+            "actor": "Kelly Jo Minter",
+            "text": "You think that's the place she's buried?"
+        }
+    ]
+},
+{
+    "id": 4833,
+    "characters": [
+        "ALICE",
+        "YVONNE"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Lisa Wilcox",
+        "Kelly Jo Minter"
+    ],
+    "transcript": "Jacob.  We've got to get to Amanda before it's too late.What?",
+    "previous_dialogue": 4830,
+    "next_dialogue": 4836,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8776",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "Jacob.  We've got to get to Amanda before it's too late."
+        },
+        {
+            "id": "L8775",
+            "character": "YVONNE",
+            "actor": "Kelly Jo Minter",
+            "text": "What?"
+        }
+    ]
+},
+{
+    "id": 4836,
+    "characters": [
+        "ALICE",
+        "YVONNE"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Lisa Wilcox",
+        "Kelly Jo Minter"
+    ],
+    "transcript": "We've got to go to the asylum and find her body.  Mark said her soul's trapped with it -- that's why she can't come to me.  It must be!But how are we gonna --",
+    "previous_dialogue": 4833,
+    "next_dialogue": 4839,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8778",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "We've got to go to the asylum and find her body.  Mark said her soul's trapped with it -- that's why she can't come to me.  It must be!"
+        },
+        {
+            "id": "L8777",
+            "character": "YVONNE",
+            "actor": "Kelly Jo Minter",
+            "text": "But how are we gonna --"
+        }
+    ]
+},
+{
+    "id": 4839,
+    "characters": [
+        "ALICE",
+        "YVONNE"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Lisa Wilcox",
+        "Kelly Jo Minter"
+    ],
+    "transcript": "So did Dan.You do good work Alice.",
+    "previous_dialogue": 4836,
+    "next_dialogue": 4842,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8817",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "So did Dan."
+        },
+        {
+            "id": "L8816",
+            "character": "YVONNE",
+            "actor": "Kelly Jo Minter",
+            "text": "You do good work Alice."
+        }
+    ]
+},
+{
+    "id": 4842,
+    "characters": [
+        "ALICE",
+        "YVONNE"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Lisa Wilcox",
+        "Kelly Jo Minter"
+    ],
+    "transcript": "That's okay.  He's got the rest of his life to catch up on his sleep.He sure loves to stay awake.",
+    "previous_dialogue": 4839,
+    "next_dialogue": 4845,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8819",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "That's okay.  He's got the rest of his life to catch up on his sleep."
+        },
+        {
+            "id": "L8818",
+            "character": "YVONNE",
+            "actor": "Kelly Jo Minter",
+            "text": "He sure loves to stay awake."
+        }
+    ]
+},
+{
+    "id": 4845,
+    "characters": [
+        "ALICE",
+        "MARK"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Joe Seely",
+        "Lisa Wilcox"
+    ],
+    "transcript": "I think I'm starting to wear her down.  Have some anyway.Give up Mark it's hopeless.",
+    "previous_dialogue": 4842,
+    "next_dialogue": 4848,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8377",
+            "character": "MARK",
+            "actor": "Joe Seely",
+            "text": "I think I'm starting to wear her down.  Have some anyway."
+        },
+        {
+            "id": "L8376",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "Give up Mark it's hopeless."
+        }
+    ]
+},
+{
+    "id": 4848,
+    "characters": [
+        "ALICE",
+        "MARK"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Joe Seely",
+        "Lisa Wilcox"
+    ],
+    "transcript": "Greta come on.  One burger with me?Not to mention the heartbreak of psoriasis.",
+    "previous_dialogue": 4845,
+    "next_dialogue": 4851,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8383",
+            "character": "MARK",
+            "actor": "Joe Seely",
+            "text": "Greta come on.  One burger with me?"
+        },
+        {
+            "id": "L8382",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "Not to mention the heartbreak of psoriasis."
+        }
+    ]
+},
+{
+    "id": 4851,
+    "characters": [
+        "ALICE",
+        "MARK"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Joe Seely",
+        "Lisa Wilcox"
+    ],
+    "transcript": "Well we gotta do something!My dad's got this thing about drinking in the house.",
+    "previous_dialogue": 4848,
+    "next_dialogue": 4854,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8424",
+            "character": "MARK",
+            "actor": "Joe Seely",
+            "text": "Well we gotta do something!"
+        },
+        {
+            "id": "L8423",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "My dad's got this thing about drinking in the house."
+        }
+    ]
+},
+{
+    "id": 4854,
+    "characters": [
+        "ALICE",
+        "MARK"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Lisa Wilcox",
+        "Joe Seely"
+    ],
+    "transcript": "That's why it's my fault Dan's dead.I've got to write some of this down.",
+    "previous_dialogue": 4851,
+    "next_dialogue": 4857,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8557",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "That's why it's my fault Dan's dead."
+        },
+        {
+            "id": "L8556",
+            "character": "MARK",
+            "actor": "Joe Seely",
+            "text": "I've got to write some of this down."
+        }
+    ]
+},
+{
+    "id": 4857,
+    "characters": [
+        "ALICE",
+        "MARK"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Joe Seely",
+        "Lisa Wilcox"
+    ],
+    "transcript": "Yeah.  I'm just aces.Mark are you okay?",
+    "previous_dialogue": 4854,
+    "next_dialogue": 4860,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8610",
+            "character": "MARK",
+            "actor": "Joe Seely",
+            "text": "Yeah.  I'm just aces."
+        },
+        {
+            "id": "L8609",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "Mark are you okay?"
+        }
+    ]
+},
+{
+    "id": 4860,
+    "characters": [
+        "ALICE",
+        "MARK"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Joe Seely",
+        "Lisa Wilcox"
+    ],
+    "transcript": "I'm very fucking sorry but Greta is dead today.  Could we interest you in someone else?I want to talk to both you guys about Greta.  And...",
+    "previous_dialogue": 4857,
+    "next_dialogue": 4863,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8612",
+            "character": "MARK",
+            "actor": "Joe Seely",
+            "text": "I'm very fucking sorry but Greta is dead today.  Could we interest you in someone else?"
+        },
+        {
+            "id": "L8611",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "I want to talk to both you guys about Greta.  And..."
+        }
+    ]
+},
+{
+    "id": 4863,
+    "characters": [
+        "ALICE",
+        "MARK"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Lisa Wilcox",
+        "Joe Seely"
+    ],
+    "transcript": "She must've fallen asleep at the table...I thought about that.",
+    "previous_dialogue": 4860,
+    "next_dialogue": 4866,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8617",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "She must've fallen asleep at the table..."
+        },
+        {
+            "id": "L8616",
+            "character": "MARK",
+            "actor": "Joe Seely",
+            "text": "I thought about that."
+        }
+    ]
+},
+{
+    "id": 4866,
+    "characters": [
+        "ALICE",
+        "MARK"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Lisa Wilcox",
+        "Joe Seely"
+    ],
+    "transcript": "Mark!Then get out!",
+    "previous_dialogue": 4863,
+    "next_dialogue": 4869,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8627",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "Mark!"
+        },
+        {
+            "id": "L8626",
+            "character": "MARK",
+            "actor": "Joe Seely",
+            "text": "Then get out!"
+        }
+    ]
+},
+{
+    "id": 4869,
+    "characters": [
+        "ALICE",
+        "MARK"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Lisa Wilcox",
+        "Joe Seely"
+    ],
+    "transcript": "Nobody thinks that.Do you think I'm an idiot...for being in love with her?",
+    "previous_dialogue": 4866,
+    "next_dialogue": 4872,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8634",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "Nobody thinks that."
+        },
+        {
+            "id": "L8633",
+            "character": "MARK",
+            "actor": "Joe Seely",
+            "text": "Do you think I'm an idiot...for being in love with her?"
+        }
+    ]
+},
+{
+    "id": 4872,
+    "characters": [
+        "ALICE",
+        "MARK"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Lisa Wilcox",
+        "Joe Seely"
+    ],
+    "transcript": "It wasn't her mother.  The only reason we're still here is that none of us has slept since the grad party.Maybe it was her mother who killed her with all that Polly Perfect shit.",
+    "previous_dialogue": 4869,
+    "next_dialogue": 4875,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8638",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "It wasn't her mother.  The only reason we're still here is that none of us has slept since the grad party."
+        },
+        {
+            "id": "L8637",
+            "character": "MARK",
+            "actor": "Joe Seely",
+            "text": "Maybe it was her mother who killed her with all that Polly Perfect shit."
+        }
+    ]
+},
+{
+    "id": 4875,
+    "characters": [
+        "ALICE",
+        "MARK"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Lisa Wilcox",
+        "Joe Seely"
+    ],
+    "transcript": "Why don't I go make some coffee.  There's a lot to tell.Tell me some more about this Krueger guy.",
+    "previous_dialogue": 4872,
+    "next_dialogue": 4878,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8640",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "Why don't I go make some coffee.  There's a lot to tell."
+        },
+        {
+            "id": "L8639",
+            "character": "MARK",
+            "actor": "Joe Seely",
+            "text": "Tell me some more about this Krueger guy."
+        }
+    ]
+},
+{
+    "id": 4878,
+    "characters": [
+        "ALICE",
+        "MARK"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Joe Seely",
+        "Lisa Wilcox"
+    ],
+    "transcript": "What you named it already?My baby!Who's Jacob?",
+    "previous_dialogue": 4875,
+    "next_dialogue": 4882,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8665",
+            "character": "MARK",
+            "actor": "Joe Seely",
+            "text": "What you named it already?"
+        },
+        {
+            "id": "L8664",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "My baby!"
+        },
+        {
+            "id": "L8663",
+            "character": "MARK",
+            "actor": "Joe Seely",
+            "text": "Who's Jacob?"
+        }
+    ]
+},
+{
+    "id": 4882,
+    "characters": [
+        "ALICE",
+        "MARK"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Lisa Wilcox",
+        "Joe Seely"
+    ],
+    "transcript": "I don't know!Whoa slow down.  How're you gonna hide from a guy like that leave the planet?",
+    "previous_dialogue": 4878,
+    "next_dialogue": 4885,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8668",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "I don't know!"
+        },
+        {
+            "id": "L8667",
+            "character": "MARK",
+            "actor": "Joe Seely",
+            "text": "Whoa slow down.  How're you gonna hide from a guy like that leave the planet?"
+        }
+    ]
+},
+{
+    "id": 4885,
+    "characters": [
+        "ALICE",
+        "MARK"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Joe Seely",
+        "Lisa Wilcox"
+    ],
+    "transcript": "I'm going to see what else I can find out about Mr. Fred KruegerWhere are you going?",
+    "previous_dialogue": 4882,
+    "next_dialogue": 4888,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8671",
+            "character": "MARK",
+            "actor": "Joe Seely",
+            "text": "I'm going to see what else I can find out about Mr. Fred Krueger"
+        },
+        {
+            "id": "L8670",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "Where are you going?"
+        }
+    ]
+},
+{
+    "id": 4888,
+    "characters": [
+        "ALICE",
+        "MARK"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Joe Seely",
+        "Lisa Wilcox"
+    ],
+    "transcript": "Then we'll find another way.I couldn't do that Mark.  He's my last link with Dan...No I want him.",
+    "previous_dialogue": 4885,
+    "next_dialogue": 4891,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8711",
+            "character": "MARK",
+            "actor": "Joe Seely",
+            "text": "Then we'll find another way."
+        },
+        {
+            "id": "L8710",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "I couldn't do that Mark.  He's my last link with Dan...No I want him."
+        }
+    ]
+},
+{
+    "id": 4891,
+    "characters": [
+        "ALICE",
+        "MARK"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Joe Seely",
+        "Lisa Wilcox"
+    ],
+    "transcript": "That's their problem.They think I'm nuts.",
+    "previous_dialogue": 4888,
+    "next_dialogue": 4894,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8733",
+            "character": "MARK",
+            "actor": "Joe Seely",
+            "text": "That's their problem."
+        },
+        {
+            "id": "L8732",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "They think I'm nuts."
+        }
+    ]
+},
+{
+    "id": 4894,
+    "characters": [
+        "ALICE",
+        "MARK"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Lisa Wilcox",
+        "Joe Seely"
+    ],
+    "transcript": "Meaning?That's what the newspapers thought.  She spent the rest of her life in the asylum. After Krueger's trial she flipped out and hung herself so they thought.No it's our problem Mark.  If I don't deal with this they really might try to take Jacob.  You said she committed suicide?",
+    "previous_dialogue": 4891,
+    "next_dialogue": 4898,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8736",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "Meaning?"
+        },
+        {
+            "id": "L8735",
+            "character": "MARK",
+            "actor": "Joe Seely",
+            "text": "That's what the newspapers thought.  She spent the rest of her life in the asylum. After Krueger's trial she flipped out and hung herself so they thought."
+        },
+        {
+            "id": "L8734",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "No it's our problem Mark.  If I don't deal with this they really might try to take Jacob.  You said she committed suicide?"
+        }
+    ]
+},
+{
+    "id": 4898,
+    "characters": [
+        "ALICE",
+        "MARK"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Joe Seely",
+        "Lisa Wilcox"
+    ],
+    "transcript": "Empty plot.  Memorial stone.  Vacant. They never did put her under.  Cool huh?But I've seen her grave.They couldn't prove it.  No body!  Nuns bumping themselves off is bad for business.",
+    "previous_dialogue": 4894,
+    "next_dialogue": 4902,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8739",
+            "character": "MARK",
+            "actor": "Joe Seely",
+            "text": "Empty plot.  Memorial stone.  Vacant. They never did put her under.  Cool huh?"
+        },
+        {
+            "id": "L8738",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "But I've seen her grave."
+        },
+        {
+            "id": "L8737",
+            "character": "MARK",
+            "actor": "Joe Seely",
+            "text": "They couldn't prove it.  No body!  Nuns bumping themselves off is bad for business."
+        }
+    ]
+},
+{
+    "id": 4902,
+    "characters": [
+        "ALICE",
+        "MARK"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Joe Seely",
+        "Lisa Wilcox"
+    ],
+    "transcript": "No shit.Poor woman...",
+    "previous_dialogue": 4898,
+    "next_dialogue": 4905,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8741",
+            "character": "MARK",
+            "actor": "Joe Seely",
+            "text": "No shit."
+        },
+        {
+            "id": "L8740",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "Poor woman..."
+        }
+    ]
+},
+{
+    "id": 4905,
+    "characters": [
+        "ALICE",
+        "MARK"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Joe Seely",
+        "Lisa Wilcox"
+    ],
+    "transcript": "She killed herself.  Her soul's gonna be in torment.I don't understand.",
+    "previous_dialogue": 4902,
+    "next_dialogue": 4908,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8743",
+            "character": "MARK",
+            "actor": "Joe Seely",
+            "text": "She killed herself.  Her soul's gonna be in torment."
+        },
+        {
+            "id": "L8742",
+            "character": "ALICE",
+            "actor": "Lisa Wilcox",
+            "text": "I don't understand."
+        }
+    ]
+},
+{
+    "id": 4908,
+    "characters": [
+        "GRETA",
+        "MARK"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Joe Seely",
+        "Erika Anderson"
+    ],
+    "transcript": "My undying love.  Have some.Next life.  Oh what's that?Yeah when are you gonna come to your senses?",
+    "previous_dialogue": 4905,
+    "next_dialogue": 4912,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8375",
+            "character": "MARK",
+            "actor": "Joe Seely",
+            "text": "My undying love.  Have some."
+        },
+        {
+            "id": "L8374",
+            "character": "GRETA",
+            "actor": "Erika Anderson",
+            "text": "Next life.  Oh what's that?"
+        },
+        {
+            "id": "L8373",
+            "character": "MARK",
+            "actor": "Joe Seely",
+            "text": "Yeah when are you gonna come to your senses?"
+        }
+    ]
+},
+{
+    "id": 4912,
+    "characters": [
+        "GRETA",
+        "MARK"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Erika Anderson",
+        "Joe Seely"
+    ],
+    "transcript": "Pimples heartburn cellulite... and no modeling career.Meet me later.  Milkshakes.  Cherry pie. Banana splits.  And no mom!",
+    "previous_dialogue": 4908,
+    "next_dialogue": 4915,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8381",
+            "character": "GRETA",
+            "actor": "Erika Anderson",
+            "text": "Pimples heartburn cellulite... and no modeling career."
+        },
+        {
+            "id": "L8380",
+            "character": "MARK",
+            "actor": "Joe Seely",
+            "text": "Meet me later.  Milkshakes.  Cherry pie. Banana splits.  And no mom!"
+        }
+    ]
+},
+{
+    "id": 4915,
+    "characters": [
+        "GRETA",
+        "MARK"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Erika Anderson",
+        "Joe Seely"
+    ],
+    "transcript": "You know my mother -- get real.  What about Alice's?That club sucks they card everybody. Let's just party at your place.",
+    "previous_dialogue": 4912,
+    "next_dialogue": 4918,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8422",
+            "character": "GRETA",
+            "actor": "Erika Anderson",
+            "text": "You know my mother -- get real.  What about Alice's?"
+        },
+        {
+            "id": "L8421",
+            "character": "MARK",
+            "actor": "Joe Seely",
+            "text": "That club sucks they card everybody. Let's just party at your place."
+        }
+    ]
+},
+{
+    "id": 4918,
+    "characters": [
+        "GRETA",
+        "MARK"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Joe Seely",
+        "Erika Anderson"
+    ],
+    "transcript": "Oh he was this ancient guy I read about who like killed his kids 'cause they didn't want to run the kingdom the way he thought they should.Who?He's right.  Sometimes I feel like I'm living with Melicertes.",
+    "previous_dialogue": 4915,
+    "next_dialogue": 4922,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8490",
+            "character": "MARK",
+            "actor": "Joe Seely",
+            "text": "Oh he was this ancient guy I read about who like killed his kids 'cause they didn't want to run the kingdom the way he thought they should."
+        },
+        {
+            "id": "L8489",
+            "character": "GRETA",
+            "actor": "Erika Anderson",
+            "text": "Who?"
+        },
+        {
+            "id": "L8488",
+            "character": "MARK",
+            "actor": "Joe Seely",
+            "text": "He's right.  Sometimes I feel like I'm living with Melicertes."
+        }
+    ]
+},
+{
+    "id": 4922,
+    "characters": [
+        "GRETA",
+        "MARK"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Erika Anderson",
+        "Joe Seely"
+    ],
+    "transcript": "I don't believe this... All that gore you paint in the comics and you're squeamish?Oh man!  I could've gone all night without looking at that.",
+    "previous_dialogue": 4918,
+    "next_dialogue": 4925,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8495",
+            "character": "GRETA",
+            "actor": "Erika Anderson",
+            "text": "I don't believe this... All that gore you paint in the comics and you're squeamish?"
+        },
+        {
+            "id": "L8494",
+            "character": "MARK",
+            "actor": "Joe Seely",
+            "text": "Oh man!  I could've gone all night without looking at that."
+        }
+    ]
+},
+{
+    "id": 4925,
+    "characters": [
+        "GRETA",
+        "YVONNE"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Kelly Jo Minter",
+        "Erika Anderson"
+    ],
+    "transcript": "Makes you look like a nun--These things are wild...  What do you think?",
+    "previous_dialogue": 4922,
+    "next_dialogue": 4928,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8367",
+            "character": "YVONNE",
+            "actor": "Kelly Jo Minter",
+            "text": "Makes you look like a nun--"
+        },
+        {
+            "id": "L8366",
+            "character": "GRETA",
+            "actor": "Erika Anderson",
+            "text": "These things are wild...  What do you think?"
+        }
+    ]
+},
+{
+    "id": 4928,
+    "characters": [
+        "GRETA",
+        "YVONNE"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Kelly Jo Minter",
+        "Erika Anderson"
+    ],
+    "transcript": "That means they're gonna give me the key to the pool so I can lock up when I'm done.Yeah...All right kids I tell you what we're gonna do.  I've got swimming practice until six-thirty today...",
+    "previous_dialogue": 4925,
+    "next_dialogue": 4932,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8427",
+            "character": "YVONNE",
+            "actor": "Kelly Jo Minter",
+            "text": "That means they're gonna give me the key to the pool so I can lock up when I'm done."
+        },
+        {
+            "id": "L8426",
+            "character": "GRETA",
+            "actor": "Erika Anderson",
+            "text": "Yeah..."
+        },
+        {
+            "id": "L8425",
+            "character": "YVONNE",
+            "actor": "Kelly Jo Minter",
+            "text": "All right kids I tell you what we're gonna do.  I've got swimming practice until six-thirty today..."
+        }
+    ]
+},
+{
+    "id": 4932,
+    "characters": [
+        "GRETA",
+        "YVONNE"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Erika Anderson",
+        "Kelly Jo Minter"
+    ],
+    "transcript": "Nah.  It's getting too cold for me and my wonderful mother will kill me if I screw up my hair.  She's got some model agency guy coming to dinner tomorrow night.Naah I'm done.  Got to be on shift in a couple hours.  Aren't you going in?Have another one sounds like you need it.",
+    "previous_dialogue": 4928,
+    "next_dialogue": 4936,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8484",
+            "character": "GRETA",
+            "actor": "Erika Anderson",
+            "text": "Nah.  It's getting too cold for me and my wonderful mother will kill me if I screw up my hair.  She's got some model agency guy coming to dinner tomorrow night."
+        },
+        {
+            "id": "L8483",
+            "character": "YVONNE",
+            "actor": "Kelly Jo Minter",
+            "text": "Naah I'm done.  Got to be on shift in a couple hours.  Aren't you going in?"
+        },
+        {
+            "id": "L8482",
+            "character": "GRETA",
+            "actor": "Erika Anderson",
+            "text": "Have another one sounds like you need it."
+        }
+    ]
+},
+{
+    "id": 4936,
+    "characters": [
+        "GRETA",
+        "YVONNE"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Erika Anderson",
+        "Kelly Jo Minter"
+    ],
+    "transcript": "I want to talk about the baby.Stop saying that it's bullshit.",
+    "previous_dialogue": 4932,
+    "next_dialogue": 4939,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8559",
+            "character": "GRETA",
+            "actor": "Erika Anderson",
+            "text": "I want to talk about the baby."
+        },
+        {
+            "id": "L8558",
+            "character": "YVONNE",
+            "actor": "Kelly Jo Minter",
+            "text": "Stop saying that it's bullshit."
+        }
+    ]
+},
+{
+    "id": 4939,
+    "characters": [
+        "GRETA",
+        "YVONNE"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Erika Anderson",
+        "Kelly Jo Minter"
+    ],
+    "transcript": "Pushy parents can make you more than a bit crazy.Look.  Dan's parents were pushing him. Pushing him hard.  He was bitching about it at the party last night.  He was under pressure.  We all are.",
+    "previous_dialogue": 4936,
+    "next_dialogue": 4942,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8563",
+            "character": "GRETA",
+            "actor": "Erika Anderson",
+            "text": "Pushy parents can make you more than a bit crazy."
+        },
+        {
+            "id": "L8562",
+            "character": "YVONNE",
+            "actor": "Kelly Jo Minter",
+            "text": "Look.  Dan's parents were pushing him. Pushing him hard.  He was bitching about it at the party last night.  He was under pressure.  We all are."
+        }
+    ]
+},
+{
+    "id": 4942,
+    "characters": [
+        "GRETA",
+        "YVONNE"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Kelly Jo Minter",
+        "Erika Anderson"
+    ],
+    "transcript": "All of us.  Right?Bottom line Alice.  Anybody supernatural or not that wants to hurt you - he'll have to go through us first.",
+    "previous_dialogue": 4939,
+    "next_dialogue": 4945,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8571",
+            "character": "YVONNE",
+            "actor": "Kelly Jo Minter",
+            "text": "All of us.  Right?"
+        },
+        {
+            "id": "L8570",
+            "character": "GRETA",
+            "actor": "Erika Anderson",
+            "text": "Bottom line Alice.  Anybody supernatural or not that wants to hurt you - he'll have to go through us first."
+        }
+    ]
+},
+{
+    "id": 4945,
+    "characters": [
+        "MARK",
+        "YVONNE"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Kelly Jo Minter",
+        "Joe Seely"
+    ],
+    "transcript": "Two hours a day six days a week.Dan.  And he's taking Alice with him -- pretty good dive Yvonne.  You've been practicing.",
+    "previous_dialogue": 4942,
+    "next_dialogue": 4948,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8481",
+            "character": "YVONNE",
+            "actor": "Kelly Jo Minter",
+            "text": "Two hours a day six days a week."
+        },
+        {
+            "id": "L8480",
+            "character": "MARK",
+            "actor": "Joe Seely",
+            "text": "Dan.  And he's taking Alice with him -- pretty good dive Yvonne.  You've been practicing."
+        }
+    ]
+},
+{
+    "id": 4948,
+    "characters": [
+        "MARK",
+        "YVONNE"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Joe Seely",
+        "Kelly Jo Minter"
+    ],
+    "transcript": "Faint.Vomit?",
+    "previous_dialogue": 4945,
+    "next_dialogue": 4951,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8499",
+            "character": "MARK",
+            "actor": "Joe Seely",
+            "text": "Faint."
+        },
+        {
+            "id": "L8498",
+            "character": "YVONNE",
+            "actor": "Kelly Jo Minter",
+            "text": "Vomit?"
+        }
+    ]
+},
+{
+    "id": 4951,
+    "characters": [
+        "MARK",
+        "YVONNE"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Kelly Jo Minter",
+        "Joe Seely"
+    ],
+    "transcript": "I can't listen to this.I'm not finished - I loved Greta.  A lot. And if maybe just maybe someone or some thing killed her I'd like to hear about it!Mark...Why don't you shut up and let her talk! Two of us died in the last two days does that strike you as particularly normal?!",
+    "previous_dialogue": 4948,
+    "next_dialogue": 4956,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8625",
+            "character": "YVONNE",
+            "actor": "Kelly Jo Minter",
+            "text": "I can't listen to this."
+        },
+        {
+            "id": "L8624",
+            "character": "MARK",
+            "actor": "Joe Seely",
+            "text": "I'm not finished - I loved Greta.  A lot. And if maybe just maybe someone or some thing killed her I'd like to hear about it!"
+        },
+        {
+            "id": "L8623",
+            "character": "YVONNE",
+            "actor": "Kelly Jo Minter",
+            "text": "Mark..."
+        },
+        {
+            "id": "L8622",
+            "character": "MARK",
+            "actor": "Joe Seely",
+            "text": "Why don't you shut up and let her talk! Two of us died in the last two days does that strike you as particularly normal?!"
+        }
+    ]
+},
+{
+    "id": 4956,
+    "characters": [
+        "MARK",
+        "YVONNE"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Joe Seely",
+        "Kelly Jo Minter"
+    ],
+    "transcript": "Stick around please?It's okay.",
+    "previous_dialogue": 4951,
+    "next_dialogue": 4959,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8630",
+            "character": "MARK",
+            "actor": "Joe Seely",
+            "text": "Stick around please?"
+        },
+        {
+            "id": "L8629",
+            "character": "YVONNE",
+            "actor": "Kelly Jo Minter",
+            "text": "It's okay."
+        }
+    ]
+},
+{
+    "id": 4959,
+    "characters": [
+        "MARK",
+        "YVONNE"
+    ],
+    "movie": "a nightmare on elm street: the dream child",
+    "genres": [
+        "fantasy",
+        "horror",
+        "thriller"
+    ],
+    "year": "1989",
+    "actors": [
+        "Joe Seely",
+        "Kelly Jo Minter"
+    ],
+    "transcript": "He invited me to his house last night.You too?",
+    "previous_dialogue": 4956,
+    "next_dialogue": 4962,
+    "content_type": "parentDocument",
+    "lines": [
+        {
+            "id": "L8703",
+            "character": "MARK",
+            "actor": "Joe Seely",
+            "text": "He invited me to his house last night."
+        },
+        {
+            "id": "L8702",
+            "character": "YVONNE",
+            "actor": "Kelly Jo Minter",
+            "text": "You too?"
+        }
+    ]
+},
