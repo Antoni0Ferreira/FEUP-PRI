@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #__next {
+    height: 100vh;
+    width: 100%;
+    scroll-behavior: smooth;
+    font-family: "Noto Sans", sans-serif;
+}
+body {
+    background-color: #F6F6F6;
+    overflow-y: scroll;
+}
+.page-content{
+    min-height: calc(100vh - 4rem);
+    width: 100%;
+}
+
+.content-padding{
+    padding: 1.5rem 1rem;
+}
+/* not mobile yet */
+@media (min-width: 425px) {
+    .content-padding{
+        padding: 2rem;
+    }
+}
+
+/* sm */
+@media (min-width: 640px) {
+    .content-padding{
+        padding: 4rem;
+    }
+}
+/* md */
+@media (min-width: 768px) {
+    .page-content {
+        min-height: calc(100vh - 5rem);
+    }
+    .content-padding{
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+}
+
+.border-1{
+    border-width: 1px;
+}
+
+:root {
+	--PhoneInput-color--focus: #C12129 !important;
+}
+
+.PhoneInputInput {
+    display: block;
+    width: 100%;
+    border-radius: 0.375rem;
+    border-color: #d1d5db;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    font-size: 0.875rem; /* 14px */
+    line-height: 1.25rem; /* 20px */
+}
+.PhoneInputInput:focus {
+    border-color: #C12129 !important;
+    --tw-ring-color: #C12129 !important;
+}
+.invalid .PhoneInputInput, .invalid.email-input {
+    background-color: rgba(255, 0, 0, 0.285) !important;
+}
+.PhoneInputInput::placeholder {
+    color: #374151;
+}
+
+input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

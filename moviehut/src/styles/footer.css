@@ -1,0 +1,51 @@
+.footer {
+    text-align: center;
+    padding:1px;
+    bottom: 0;
+    width: 100%;
+    background-color: #ffffff;
+    color: #C12129;
+    font-size: 1.1rem;
+    box-shadow: inset 0 6px 4px -5px rgb(0,0,0,0.3);
+  }
+
+.footer .icon {
+    /* display: inline; */
+    margin-right: 10px;
+}
+
+.mini{
+    position: relative;
+}
+
+.footer .icon:hover{
+    color: rgb(244, 27, 27);
+}
+
+.grid-container{
+    display: grid;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.logo{
+    margin-bottom: 10px;
+}
+
+.text-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.icon-container{
+    margin-bottom: 18px;
+}
+
+
+.secondary-text{
+    color: rgb(0, 0, 0);
+    font-size: 0.9rem;
+}
