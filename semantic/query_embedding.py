@@ -1,6 +1,26 @@
 import requests
 from sentence_transformers import SentenceTransformer
 
+
+def solr_text_query(endpoint, collection, query):
+    url = f"{endpoint}/{collection}/select"
+
+    data = {
+        "q": "transcript:" + query,
+        "fl": "id,movie,transcript,score",
+        "rows": 10,
+        "wt": "json"
+    }
+
+    headers = {
+        "Content-Type": "application/x-www-form-urlencoded"
+    }
+
+    response = requests.post(url, data=data, headers=headers)
+    response.raise_for_status()
+    return response.json()
+
+
 def text_to_embedding(text):
     model = SentenceTransformer('all-MiniLM-L6-v2')
     embedding = model.encode(text, convert_to_tensor=False).tolist()
@@ -46,6 +66,17 @@ def main():
     try:
         results = solr_knn_query(solr_endpoint, collection, embedding)
         display_results(results)
+    except requests.HTTPError as e:
+        print(f"Error {e.response.status_code}: {e.response.text}")
+        
+    #---------------------#
+    text_query = input("\nEnter your regular text search query: ")
+
+    try:
+        # Regular Text Search
+        text_results = solr_text_query(solr_endpoint, collection, text_query)
+        print("\nRegular Text Search Results:")
+        display_results(text_results)
     except requests.HTTPError as e:
         print(f"Error {e.response.status_code}: {e.response.text}")
 

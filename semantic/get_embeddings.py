@@ -16,20 +16,9 @@ if __name__ == "__main__":
     # Update each document in the JSON data
     for document in data:
         # Extract fields if they exist, otherwise default to empty strings
-        characters = document.get("characters", "")
-        movie = document.get("movie", "")
-        genres = document.get("genres", "")
-        actors = document.get("actors", "")
         transcript = document.get("transcript", "")
-        
-        # transform list characters to string
-        characters = " ".join(characters)
-        # transform list genres to string
-        genres = " ".join(genres)
-        # transform list actors to string
-        actors = " ".join(actors)
     
-        combined_text = characters + " " + movie + " " + genres + " " + actors + " " + transcript
+        combined_text = transcript
         document["vector"] = get_embedding(combined_text)
 
     # Output updated JSON to STDOUT
