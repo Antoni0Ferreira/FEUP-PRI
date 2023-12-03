@@ -78,3 +78,9 @@
     background-color: #ebebeb;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
+
+  .title_results {
+    font-size: 1.5rem;
+    margin: 1rem;
+    color: #333;
+  }
