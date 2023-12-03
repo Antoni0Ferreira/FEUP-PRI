@@ -1,0 +1,84 @@
+import requests
+from sentence_transformers import SentenceTransformer
+
+
+def solr_text_query(endpoint, collection, query):
+    url = f"{endpoint}/{collection}/select"
+
+    data = {
+        "q": "transcript:" + query,
+        "fl": "id,movie,transcript,score",
+        "rows": 10,
+        "wt": "json"
+    }
+
+    headers = {
+        "Content-Type": "application/x-www-form-urlencoded"
+    }
+
+    response = requests.post(url, data=data, headers=headers)
+    response.raise_for_status()
+    return response.json()
+
+
+def text_to_embedding(text):
+    model = SentenceTransformer('all-MiniLM-L6-v2')
+    embedding = model.encode(text, convert_to_tensor=False).tolist()
+    
+    # Convert the embedding to the expected format
+    embedding_str = "[" + ",".join(map(str, embedding)) + "]"
+    return embedding_str
+
+def solr_knn_query(endpoint, collection, embedding):
+    url = f"{endpoint}/{collection}/select"
+
+    data = {
+        "q": f"{{!knn f=vector topK=10}}{embedding}",
+        "fl": "id,movie,score,transcript",
+        "rows": 10,
+        "wt": "json"
+    }
+    
+    headers = {
+        "Content-Type": "application/x-www-form-urlencoded"
+    }
+    
+    response = requests.post(url, data=data, headers=headers)
+    response.raise_for_status()
+    return response.json()
+
+def display_results(results):
+    docs = results.get("response", {}).get("docs", [])
+    if not docs:
+        print("No results found.")
+        return
+
+    for doc in docs:
+        print(f"* {doc.get('id')} {doc.get('movie')} {doc.get('transcript')} [score: {doc.get('score'):.2f}]")
+
+def main():
+    solr_endpoint = "http://localhost:8983/solr"
+    collection = "complex_conversations"
+    
+    query_text = input("Enter your query: ")
+    embedding = text_to_embedding(query_text)
+
+    try:
+        results = solr_knn_query(solr_endpoint, collection, embedding)
+        display_results(results)
+    except requests.HTTPError as e:
+        print(f"Error {e.response.status_code}: {e.response.text}")
+        
+    #---------------------#
+    text_query = input("\nEnter your regular text search query: ")
+
+    try:
+        # Regular Text Search
+        text_results = solr_text_query(solr_endpoint, collection, text_query)
+        print("\nRegular Text Search Results:")
+        display_results(text_results)
+    except requests.HTTPError as e:
+        print(f"Error {e.response.status_code}: {e.response.text}")
+
+if __name__ == "__main__":
+    main()

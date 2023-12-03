@@ -57,11 +57,11 @@ docker exec moviehut_solr bin/solr delete -c simple_conversations
 docker exec moviehut_solr bin/solr create_core -c simple_conversations
 
 curl -X POST -H 'Content-type:application/json' \
-    --data-binary "@simple_conversation_schema.json" \
+    --data-binary "@schemas/simple_conversation_schema.json" \
     http://localhost:8983/solr/simple_conversations/schema
 
 curl -X POST -H 'Content-type:application/json' \
-    --data-binary "@conversations.json" \
+    --data-binary "@json/conversations.json" \
     http://localhost:8983/solr/simple_conversations/update?commit=true
 
 #-----------------#
@@ -87,9 +87,9 @@ docker cp namesynonyms.txt moviehut_solr:/var/solr/data/complex_conversations/na
 docker cp othersynonyms.txt moviehut_solr:/var/solr/data/complex_conversations/othersynonyms.txt
 
 curl -X POST -H 'Content-type:application/json' \
-    --data-binary "@complex_conversation_schema.json" \
+    --data-binary "@schemas/complex_conversation_schema.json" \
     http://localhost:8983/solr/complex_conversations/schema
 
 curl -X POST -H 'Content-type:application/json' \
-    --data-binary "@conversations.json" \
+    --data-binary "@semantic/semantic_conversations.json" \
     http://localhost:8983/solr/complex_conversations/update?commit=true
