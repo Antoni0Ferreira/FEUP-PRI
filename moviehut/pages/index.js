@@ -142,7 +142,7 @@ export default function Home() {
           <p className={styles.description}>The place to find any movie related information!</p>
           <Space direction="vertical">
             <Search
-              placeholder="Type or Press and Speak"
+              placeholder="Type or Press to Speak"
               enterButton={<Button>Search</Button>}
               size="large"
               value={transcript || undefined}
