@@ -1,6 +1,6 @@
 import NavBar from '../components/navbar.js';
 import { useEffect, useState } from 'react';
-import { Skeleton, message } from 'antd';
+import { Skeleton, message, List, Avatar, Modal } from 'antd';
 import axios from 'axios';
 
 export default function Result() {
@@ -53,6 +53,27 @@ export default function Result() {
         }
     }, [responseHeader]);
 
+    const showModal = (item) => {
+        Modal.info({
+            title: item.movie,
+            content: (
+                <div>
+                    <p><b>Release Year:</b> {item.year}</p>
+                    <p><b>Director:</b> {item.director}</p>
+                    <p><b>Characters involved:</b> {item.characters.join(', ')}</p>
+                    <p><b>Movie genres:</b> {item.genres.join(', ')}</p>
+                    <p><b>Transcript:</b> {item.transcript}</p>
+                </div>
+            ),
+            closable: true,
+            maskClosable: true,
+            okText: 'Close',
+            width: '50vw',
+            centered: true,
+            okButtonProps: { style: { display: 'none' } },
+        });
+    }
+
     return (
         <>
             {contextHolder}
@@ -62,10 +83,29 @@ export default function Result() {
                     <p>No query. Go back to the <a href="/" className='link'>homepage</a> to search.</p>
                 ):(
                     <div>
-                        <p>Searching for {query}</p>
+                        <p style={{ margin: '10px 0px 0px 20px' }}>Searching for {query}</p>
                     </div>
                 )}
                 {isLoading && <Skeleton active />}
+                {!isLoading && response && (
+                    <div>
+                        <p style={{ margin: '0 20px' }}>Found {response.numFound} results</p>
+                        <List
+                            itemLayout="horizontal"
+                            style={{ margin: '0 20px' }}
+                            dataSource={response.docs}
+                            renderItem={(item, index) => (
+                            <List.Item>
+                                <List.Item.Meta
+                                avatar={<Avatar src={`https://xsgames.co/randomusers/avatar.php?g=pixel&key=${index}`} />}
+                                title={<a onClick={() => showModal(item)}>{item.movie}</a>}
+                                description={item.transcript}
+                                />
+                            </List.Item>
+                            )}
+                        />
+                    </div>
+                )}
             </div>
         </>
     )
