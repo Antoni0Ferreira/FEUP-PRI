@@ -109,8 +109,11 @@ export default function Result() {
                             <List.Item>
                                 <List.Item.Meta
                                 avatar={<Avatar src={`https://xsgames.co/randomusers/avatar.php?g=pixel&key=${index}`} />}
-                                title={<a onClick={() => showModal(item)}>{item.movie}</a>}
+                                title={<a>{item.movie}</a>}
                                 description={<span dangerouslySetInnerHTML={{ __html: matchHighlighter(item.transcript) }}></span>}
+                                onClick={() => showModal(item)}
+                                onMouseEnter={() => { document.body.style.cursor = 'pointer'; }}
+                                onMouseLeave={() => { document.body.style.cursor = 'default'; }}
                                 />
                             </List.Item>
                             )}

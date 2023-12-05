@@ -205,7 +205,7 @@ export default function Home() {
               onChange={handleInputChange}
               status={isError ? 'error' : undefined}
             />
-            <div style={{ display: 'flex' }}>
+            <div style={{ display: 'flex'}}>
               <Dropdown menu={{ items }}>
                 <a onClick={(e) => e.preventDefault()}>
                   <Space>
