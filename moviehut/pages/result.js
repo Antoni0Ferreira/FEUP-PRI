@@ -9,6 +9,7 @@ export default function Result() {
     const [query, setQuery] = useState();
     const [isLoading, setIsLoading] = useState(true);
     const [messageApi, contextHolder] = message.useMessage();
+    const [search, setSearch] = useState();
 
     const errorMessage = () => {
         messageApi.open({
@@ -33,15 +34,21 @@ export default function Result() {
     };
 
     useEffect(() => {
-        //const storedData = JSON.parse(localStorage.getItem('response'));
+        const search = localStorage.getItem('search');
+        setSearch(search);
+        const genres = localStorage.getItem('choosenGenres');
         const selectedContext = localStorage.getItem('selectedContext');
+        const defType = 'lucene';
+        const fl = encodeURIComponent('*, [child]');
+        const q = encodeURIComponent('transcript:"' + search + '"' + (genres ? ' genres:' + genres + '' : ''));
+        const q_op = 'AND';
 
         if (!selectedContext) {
             setIsLoading(false);
             return;
         }
 
-        const url = `https://api.moviehut.pt/solr/${selectedContext}/select?defType=lucene&fl=*%2C%20score%2C%20%5Bchild%5D&indent=true&q.op=AND&q=genres%3Aaction%20transcript%3Akill&rows=100&useParams=`;
+        const url = `https://api.moviehut.pt/solr/${selectedContext}/select?defType=${defType}&fl=${fl}&indent=true&q.op=${q_op}&q=${q}&rows=100&useParams=`;
 
         fetchUrl(url);
     }, []);
@@ -53,6 +60,10 @@ export default function Result() {
         }
     }, [responseHeader]);
 
+    function matchHighlighter(text) {
+        return text.replace(new RegExp(search, 'gi'), '<b><u>$&</u></b>');
+    }
+
     const showModal = (item) => {
         Modal.info({
             title: item.movie,
@@ -62,7 +73,7 @@ export default function Result() {
                     <p><b>Director:</b> {item.director}</p>
                     <p><b>Characters involved:</b> {item.characters.join(', ')}</p>
                     <p><b>Movie genres:</b> {item.genres.join(', ')}</p>
-                    <p><b>Transcript:</b> {item.transcript}</p>
+                    <p><b>Transcript:</b> <span dangerouslySetInnerHTML={{ __html: matchHighlighter(item.transcript) }}></span></p>
                 </div>
             ),
             closable: true,
@@ -99,7 +110,7 @@ export default function Result() {
                                 <List.Item.Meta
                                 avatar={<Avatar src={`https://xsgames.co/randomusers/avatar.php?g=pixel&key=${index}`} />}
                                 title={<a onClick={() => showModal(item)}>{item.movie}</a>}
-                                description={item.transcript}
+                                description={<span dangerouslySetInnerHTML={{ __html: matchHighlighter(item.transcript) }}></span>}
                                 />
                             </List.Item>
                             )}

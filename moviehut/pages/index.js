@@ -3,6 +3,7 @@ import React, { useState, useRef, useEffect, useMemo } from 'react';
 import { useRouter } from 'next/router';
 import { DownOutlined, AudioOutlined, CloseOutlined } from '@ant-design/icons';
 import { Dropdown, Space, Input, Button, notification } from 'antd';
+import CheckboxMenu from '../components/checkBoxMenu';
 const {Search} = Input;
 const Context = React.createContext({
   name: 'Default',
@@ -14,6 +15,7 @@ export default function Home() {
   const [isSpeaking, setIsSpeaking] = useState(false);
   const [transcript, setTranscript] = useState('');
   const [isError, setIsError] = useState(false);
+  const [choosenGenres, setChoosenGenres] = useState([]);
   const recognition = useRef(null);
   const history = useRouter();
   const [api, contextHolder] = notification.useNotification();
@@ -22,6 +24,7 @@ export default function Home() {
   useEffect(() => {
     localStorage.removeItem('search');
     localStorage.removeItem('selectedContext');
+    localStorage.removeItem('choosenGenres');
   }, []);
 
   function handleContextChange(key) {
@@ -53,6 +56,7 @@ export default function Home() {
     }
     localStorage.setItem('search', value);
     localStorage.setItem('selectedContext', selectedContext);
+    localStorage.setItem('choosenGenres', choosenGenres);
     history.push('/result');
   };
 
@@ -125,7 +129,37 @@ export default function Home() {
     },
   ];
 
+  const genres = [
+    "action",
+    "adventure",
+    "music",
+    "western",
+    "sci-fi",
+    "horror",
+    "family",
+    "adult",
+    "crime",
+    "fantasy",
+    "romance",
+    "biography",
+    "film-noir",
+    "history",
+    "comedy",
+    "documentary",
+    "sport",
+    "short",
+    "musical",
+    "thriller",
+    "mystery",
+    "drama",
+    "animation",
+    "war"
+  ];
 
+  const onCheckboxChange = selection => {
+    setChoosenGenres([...selection]);
+  };
+  
   const contextValue = useMemo(
     () => ({
       name: 'MovieHut.pt',
@@ -171,14 +205,17 @@ export default function Home() {
               onChange={handleInputChange}
               status={isError ? 'error' : undefined}
             />
-            <Dropdown menu={{ items }}>
-              <a onClick={(e) => e.preventDefault()}>
-                <Space>
-                  {dropdownName}
-                  <DownOutlined />
-                </Space>
-              </a>
-            </Dropdown>
+            <div style={{ display: 'flex' }}>
+              <Dropdown menu={{ items }}>
+                <a onClick={(e) => e.preventDefault()}>
+                  <Space>
+                    {dropdownName}
+                    <DownOutlined />
+                  </Space>
+                </a>
+              </Dropdown>
+              <CheckboxMenu options={genres} onChange={onCheckboxChange}/>
+            </div>
           </Space>
         </main>
       </div>
