@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import { DownOutlined, AudioOutlined, CloseOutlined } from '@ant-design/icons';
 import { Dropdown, Space, Input, Button, notification } from 'antd';
 import CheckboxMenu from '../components/checkBoxMenu';
-const {Search} = Input;
+const { Search } = Input;
 const Context = React.createContext({
   name: 'Default',
 });
@@ -159,7 +159,7 @@ export default function Home() {
   const onCheckboxChange = selection => {
     setChoosenGenres([...selection]);
   };
-  
+
   const contextValue = useMemo(
     () => ({
       name: 'MovieHut.pt',
@@ -205,7 +205,7 @@ export default function Home() {
               onChange={handleInputChange}
               status={isError ? 'error' : undefined}
             />
-            <div style={{ display: 'flex'}}>
+            <div style={{ display: 'flex' }}>
               <Dropdown menu={{ items }}>
                 <a onClick={(e) => e.preventDefault()}>
                   <Space>
@@ -214,7 +214,7 @@ export default function Home() {
                   </Space>
                 </a>
               </Dropdown>
-              <CheckboxMenu options={genres} onChange={onCheckboxChange}/>
+              <CheckboxMenu options={genres} onChange={onCheckboxChange} />
             </div>
           </Space>
         </main>

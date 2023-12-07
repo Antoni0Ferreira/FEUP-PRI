@@ -6,14 +6,14 @@ import AppLayout from "../src/layout/AppLayout";
 import Footer from '../components/footer.js';
 
 function MyApp({ Component, pageProps }) {
-	return (
+    return (
         <AppLayout>
             <>
                 <Component {...pageProps} />
-                {Component && <Footer/>}
+                {Component && <Footer />}
             </>
         </AppLayout>
-	);
+    );
 }
 
 export default MyApp;

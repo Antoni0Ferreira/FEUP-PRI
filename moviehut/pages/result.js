@@ -2,6 +2,8 @@ import NavBar from '../components/navbar.js';
 import { useEffect, useState } from 'react';
 import { Skeleton, message, List, Avatar, Modal } from 'antd';
 import axios from 'axios';
+import { Rating, Box } from '@mui/material';
+import StarIcon from '@mui/icons-material/Star';
 
 export default function Result() {
     const [response, setResponse] = useState();
@@ -11,26 +13,44 @@ export default function Result() {
     const [messageApi, contextHolder] = message.useMessage();
     const [search, setSearch] = useState();
 
+    const labels = {
+        0.5: 'Useless',
+        1: 'Useless+',
+        1.5: 'Poor',
+        2: 'Poor+',
+        2.5: 'Ok',
+        3: 'Ok+',
+        3.5: 'Good',
+        4: 'Good+',
+        4.5: 'Excellent',
+        5: 'Excellent+',
+    };
+
     const errorMessage = () => {
         messageApi.open({
-          type: 'error',
-          content: 'There was a problem with the request. Please go back and try again.',
+            type: 'error',
+            content: 'There was a problem with the request. Please go back and try again.',
         });
-      };
+    };
+
+    const fixRating = (rating) => {
+        const newRating = Math.round(rating) / 2;
+        return Math.min(Math.max(newRating, 0), 5);
+    };
 
     const fetchUrl = async (url) => {
         await axios.get(url)
-          .then((response) => {
-            console.log(response.data);
-            setResponse(response.data.response);
-            setResponseHeader(response.data.responseHeader);
-            setIsLoading(false);
-        })
-          .catch((error) => {
-            console.error(error);
-            errorMessage();
-            setIsLoading(false);
-        });
+            .then((response) => {
+                console.log(response.data);
+                setResponse(response.data.response);
+                setResponseHeader(response.data.responseHeader);
+                setIsLoading(false);
+            })
+            .catch((error) => {
+                console.error(error);
+                errorMessage();
+                setIsLoading(false);
+            });
     };
 
     useEffect(() => {
@@ -73,6 +93,7 @@ export default function Result() {
             title: item.movie,
             content: (
                 <div>
+                    <img src={"https://picsum.photos/200"} alt={item.movie} style={{ marginBottom: '10px' }} />
                     <p><b>Release Year:</b> {item.year}</p>
                     <p><b>Characters involved:</b> {item.characters.join(', ')}</p>
                     <p><b>Movie genres:</b> {item.genres.join(', ')}</p>
@@ -92,10 +113,10 @@ export default function Result() {
         <>
             {contextHolder}
             <div>
-                <NavBar/>
+                <NavBar />
                 {!response ? (
                     <p>No query. Go back to the <a href="/" className='link'>homepage</a> to search.</p>
-                ):(
+                ) : (
                     <div>
                         <p style={{ margin: '10px 0px 0px 20px' }}>Searching for {query}</p>
                     </div>
@@ -108,17 +129,26 @@ export default function Result() {
                             itemLayout="horizontal"
                             style={{ margin: '0 20px' }}
                             dataSource={response.docs}
+                            header={
+                                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                                    <div>Results</div>
+                                    <div style={{ margin: '0 70px 0 0' }}>IMDB Ratings</div>
+                                </div>
+                            }
                             renderItem={(item, index) => (
-                            <List.Item>
-                                <List.Item.Meta
-                                avatar={<Avatar src={`https://xsgames.co/randomusers/avatar.php?g=pixel&key=${index}`} />}
-                                title={<a>{item.movie}</a>}
-                                description={<span dangerouslySetInnerHTML={{ __html: item.lines[0].character + ': ' + matchHighlighter(item.lines[0].text) }}></span>}
-                                onClick={() => showModal(item)}
-                                onMouseEnter={() => { document.body.style.cursor = 'pointer'; }}
-                                onMouseLeave={() => { document.body.style.cursor = 'default'; }}
-                                />
-                            </List.Item>
+
+                                <List.Item>
+                                    <List.Item.Meta
+                                        avatar={<Avatar src={"https://picsum.photos/200"} />}
+                                        title={<a>{item.movie}</a>}
+                                        description={<span dangerouslySetInnerHTML={{ __html: item.lines[0].character + ': ' + matchHighlighter(item.lines[0].text) }}></span>}
+                                        onClick={() => showModal(item)}
+                                        onMouseEnter={() => { document.body.style.cursor = 'pointer'; }}
+                                        onMouseLeave={() => { document.body.style.cursor = 'default'; }}
+                                    />
+                                    <Rating name="read-only" value={fixRating(6)} precision={0.5} readOnly emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />} />
+                                    <Box sx={{ ml: 2 }}>{labels[fixRating(6)]}</Box>
+                                </List.Item>
                             )}
                         />
                     </div>
