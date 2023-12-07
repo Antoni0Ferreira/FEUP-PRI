@@ -20,13 +20,6 @@ export default function Home() {
   const history = useRouter();
   const [api, contextHolder] = notification.useNotification();
 
-  // Clear the local storage on page load
-  useEffect(() => {
-    localStorage.removeItem('search');
-    localStorage.removeItem('selectedContext');
-    localStorage.removeItem('choosenGenres');
-  }, []);
-
   function handleContextChange(key) {
     setSelectedContext(key);
     setDropdownName(key === 'simple_conversations' ? 'Simple Context' : 'Complex Context');
@@ -54,10 +47,17 @@ export default function Home() {
       setIsError(true);
       return;
     }
-    localStorage.setItem('search', value);
-    localStorage.setItem('selectedContext', selectedContext);
-    localStorage.setItem('choosenGenres', choosenGenres);
-    history.push('/result');
+
+    const query = {
+      search: value,
+      selectedContext: selectedContext,
+      choosenGenres: choosenGenres.join(',')
+    };
+
+    history.push({
+      pathname: '/result',
+      query: query,
+    });
   };
 
   const handleSpeechRecognition = () => {

@@ -34,10 +34,13 @@ export default function Result() {
     };
 
     useEffect(() => {
-        const search = localStorage.getItem('search');
+        // Get the query from url
+        const urlParams = new URLSearchParams(window.location.search);
+        const search = urlParams.get('search');
+        const genres = urlParams.get('choosenGenres');
+        const selectedContext = urlParams.get('selectedContext');
+
         setSearch(search);
-        const genres = localStorage.getItem('choosenGenres');
-        const selectedContext = localStorage.getItem('selectedContext');
         const defType = 'lucene';
         const fl = encodeURIComponent('*, [child]');
         const q = encodeURIComponent('transcript:"' + search + '"' + (genres ? ' genres:' + genres + '' : ''));
