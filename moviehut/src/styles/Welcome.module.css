@@ -78,3 +78,18 @@
     background-color: #ebebeb;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
+
+  .title_results {
+    font-size: 1.5rem;
+    margin: 1rem;
+    color: #c5c5c5;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #8C2D19;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
