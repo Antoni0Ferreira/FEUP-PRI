@@ -74,7 +74,6 @@ export default function Result() {
             content: (
                 <div>
                     <p><b>Release Year:</b> {item.year}</p>
-                    <p><b>Director:</b> {item.director}</p>
                     <p><b>Characters involved:</b> {item.characters.join(', ')}</p>
                     <p><b>Movie genres:</b> {item.genres.join(', ')}</p>
                     <p><b>Transcript:</b> <span dangerouslySetInnerHTML={{ __html: matchHighlighter(item.transcript) }}></span></p>
