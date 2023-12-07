@@ -45,13 +45,14 @@ export default function Result() {
         const fl = encodeURIComponent('*, [child]');
         const q = encodeURIComponent('transcript:"' + search + '"' + (genres ? ' genres:' + genres + '' : ''));
         const q_op = 'AND';
+        const rows = 100;
 
-        if (!selectedContext) {
+        if (!selectedContext || !search) {
             setIsLoading(false);
             return;
         }
 
-        const url = `https://api.moviehut.pt/solr/${selectedContext}/select?defType=${defType}&fl=${fl}&indent=true&q.op=${q_op}&q=${q}&rows=100&useParams=`;
+        const url = `https://api.moviehut.pt/solr/${selectedContext}/select?defType=${defType}&fl=${fl}&indent=true&q.op=${q_op}&q=${q}&rows=${rows}&useParams=`;
 
         fetchUrl(url);
     }, []);
@@ -113,7 +114,7 @@ export default function Result() {
                                 <List.Item.Meta
                                 avatar={<Avatar src={`https://xsgames.co/randomusers/avatar.php?g=pixel&key=${index}`} />}
                                 title={<a>{item.movie}</a>}
-                                description={<span dangerouslySetInnerHTML={{ __html: matchHighlighter(item.transcript) }}></span>}
+                                description={<span dangerouslySetInnerHTML={{ __html: item.lines[0].character + ': ' + matchHighlighter(item.lines[0].text) }}></span>}
                                 onClick={() => showModal(item)}
                                 onMouseEnter={() => { document.body.style.cursor = 'pointer'; }}
                                 onMouseLeave={() => { document.body.style.cursor = 'default'; }}
