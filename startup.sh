@@ -91,5 +91,5 @@ curl -X POST -H 'Content-type:application/json' \
     http://localhost:8983/solr/complex_conversations/schema
 
 curl -X POST -H 'Content-type:application/json' \
-    --data-binary "@semantic/semantic_conversations.json" \
+    --data-binary "@json/conversations.json" \
     http://localhost:8983/solr/complex_conversations/update?commit=true

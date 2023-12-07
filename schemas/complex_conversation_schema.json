@@ -43,6 +43,11 @@
             "vectorDimension": 384,
             "similarityFunction": "cosine",
             "knnAlgorithm": "hnsw"
+        },
+        {
+            "name": "GenericFloatField",
+            "class": "solr.TrieFloatField",
+            "precisionStep": 8
         }
     ],
     
@@ -96,6 +101,41 @@
             "name": "movie",
             "type": "GenericTextField",
             "indexed": true,
+            "stored": true,
+            "multiValued": false,
+            "required": false
+        },
+        {
+            "name": "revenue",
+            "type": "GenericIntegerField",
+            "indexed": false,
+            "stored": true,
+            "multiValued": false,
+            "required": false
+        },
+
+        {
+            "name": "runtime",
+            "type": "GenericIntegerField",
+            "indexed": false,
+            "stored": true,
+            "multiValued": false,
+            "required": false
+        },
+
+        {
+            "name": "imdb_rating",
+            "type": "GenericFloatField",
+            "indexed": true,
+            "stored": true,
+            "multiValued": false,
+            "required": false
+        },
+        
+        {
+            "name": "imdb_votes",
+            "type": "GenericIntegerField",
+            "indexed": false,
             "stored": true,
             "multiValued": false,
             "required": false
