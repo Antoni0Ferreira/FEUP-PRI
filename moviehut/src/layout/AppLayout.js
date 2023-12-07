@@ -8,7 +8,7 @@ export default function AppLayout({ children }) {
 			<Head>
 				<title>MovieHut</title>
 				<meta name="Your movie search engine" />
-				<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png"></link>
+				<link rel="icon" type="image/png" sizes="32x32" href="../unnamed.png"></link>
 			</Head>
 			{children}
 		</>
