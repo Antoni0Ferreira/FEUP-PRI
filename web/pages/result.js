@@ -2,8 +2,10 @@ import NavBar from '../components/navbar.js';
 import { useEffect, useState } from 'react';
 import { Skeleton, message, List, Avatar, Modal } from 'antd';
 import axios from 'axios';
+import { useRouter } from 'next/router';
 import { Rating, Box } from '@mui/material';
-import StarIcon from '@mui/icons-material/Star';
+import StarIcon from '@mui/icons-material/Star.js';
+import {labels, fixRating, matchHighlighter} from '../utils/utils.js';
 
 export default function Result() {
     const [response, setResponse] = useState();
@@ -12,32 +14,15 @@ export default function Result() {
     const [isLoading, setIsLoading] = useState(true);
     const [messageApi, contextHolder] = message.useMessage();
     const [search, setSearch] = useState();
-
-    const labels = {
-        0.5: 'Useless',
-        1: 'Useless+',
-        1.5: 'Poor',
-        2: 'Poor+',
-        2.5: 'Ok',
-        3: 'Ok+',
-        3.5: 'Good',
-        4: 'Good+',
-        4.5: 'Excellent',
-        5: 'Excellent+',
-    };
-
+    const [selectedContext, setSelectedContext] = useState();
+    const history = useRouter();
+    
     const errorMessage = () => {
         messageApi.open({
             type: 'error',
             content: 'There was a problem with the request. Please go back and try again.',
         });
     };
-
-    const fixRating = (rating) => {
-        const newRating = Math.round(rating) / 2;
-        return Math.min(Math.max(newRating, 0), 5);
-    };
-
     const fetchUrl = async (url) => {
         await axios.get(url)
             .then((response) => {
@@ -61,6 +46,7 @@ export default function Result() {
         const selectedContext = urlParams.get('selectedContext');
 
         setSearch(search);
+        setSelectedContext(selectedContext);
         const defType = 'lucene';
         const fl = encodeURIComponent('*, [child]');
         const q = encodeURIComponent('transcript:"' + search + '"' + (genres ? ' genres:' + genres + '' : ''));
@@ -84,10 +70,6 @@ export default function Result() {
         }
     }, [responseHeader]);
 
-    function matchHighlighter(text) {
-        return text.replace(new RegExp(search, 'gi'), '<b><u>$&</u></b>');
-    }
-
     const showModal = (item) => {
         Modal.info({
             title: item.movie,
@@ -108,6 +90,10 @@ export default function Result() {
             okButtonProps: { style: { display: 'none' } },
         });
     }
+
+    const redirectToConversationPage = (id) => {
+        history.push('/conversation?id=' + id + '&selectedContext=' + selectedContext);
+    };
 
     return (
         <>
@@ -141,8 +127,8 @@ export default function Result() {
                                     <List.Item.Meta
                                         avatar={<Avatar src={"https://picsum.photos/200"} />}
                                         title={<a>{item.movie}</a>}
-                                        description={<span dangerouslySetInnerHTML={{ __html: item.lines[0].character + ': ' + matchHighlighter(item.lines[0].text) }}></span>}
-                                        onClick={() => showModal(item)}
+                                        description={<span dangerouslySetInnerHTML={{ __html: item.lines[0].character + ': ' + matchHighlighter(item.lines[0].text, search) }}></span>}
+                                        onClick={() => redirectToConversationPage(item.id)}
                                         onMouseEnter={() => { document.body.style.cursor = 'pointer'; }}
                                         onMouseLeave={() => { document.body.style.cursor = 'default'; }}
                                     />
