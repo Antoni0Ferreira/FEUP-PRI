@@ -1,0 +1,8 @@
+.aboutUs a:hover {
+    text-decoration: underline;
+}
+
+.aboutUs a {
+    color: #0070f3;
+    text-decoration: none;
+}

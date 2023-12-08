@@ -189,7 +189,7 @@ export default function Home() {
                                     </Space>
                                 </a>
                             </Dropdown>
-                            <CheckboxMenu options={genres} onChange={onCheckboxChange} />
+                            <div style={{marginLeft: '120px'}}><CheckboxMenu options={genres} onChange={onCheckboxChange}/></div>
                         </div>
                     </Space>
                 </main>
