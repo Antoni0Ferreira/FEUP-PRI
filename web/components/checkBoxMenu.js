@@ -70,7 +70,7 @@ class CheckboxMenu extends React.Component {
     render() {
         const CheckboxRender = this.checkboxRender;
         return (
-            <Popover content={<CheckboxRender />} trigger="click" placement="bottomLeft" style={{ width: "400px" }}>
+            <Popover content={<CheckboxRender />} trigger="click" placement="middle" style={{ width: "400px" }}>
                 <Button>
                     Genres <Icon type="filter" {...this.state.icon} />
                 </Button>
