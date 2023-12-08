@@ -3,9 +3,10 @@ import React, { useEffect, useState } from 'react';
 import { Skeleton, message, Image, Button } from 'antd';
 import axios from 'axios';
 import { labels, fixRating, matchHighlighter } from '../utils/utils.js';
-import { Rating, Box } from '@mui/material';
+import { Rating } from '@mui/material';
 import StarIcon from '@mui/icons-material/Star.js';
-
+import { createUrl } from '../utils/urlUtils.js';
+import { errorMessage } from '../utils/errorUtils.js';
 
 export default function Conversation() {
     const [isLoading, setIsLoading] = useState(true);
@@ -13,24 +14,15 @@ export default function Conversation() {
     const [item, setItem] = useState();
     const [search, setSearch] = useState();
 
-
-    const errorMessage = () => {
-        messageApi.open({
-            type: 'error',
-            content: 'There was a problem with the request. Please go back and try again.',
-        });
-    };
-
     const fetchUrl = async (url) => {
         await axios.get(url)
             .then((response) => {
-                console.log(response.data.response.docs[0]);
                 setItem(response.data.response.docs[0]);
                 setIsLoading(false);
             })
             .catch((error) => {
                 console.error(error);
-                errorMessage();
+                errorMessage('solrError', messageApi);
                 setIsLoading(false);
             });
     };
@@ -54,7 +46,12 @@ export default function Conversation() {
             return;
         }
 
-        const url = `https://api.moviehut.pt/solr/${selectedContext}/select?defType=${defType}&fl=${fl}&indent=true&q.op=${q_op}&q=${q}&rows=${rows}&useParams=`;
+        const url = createUrl(selectedContext, defType, fl, q_op, q, rows);
+        if (!url) {
+            errorMessage('createUrlError', messageApi);
+            setIsLoading(false);
+            return;
+        }
 
         fetchUrl(url);
     }, []);

@@ -6,6 +6,8 @@ import { useRouter } from 'next/router';
 import { Rating, Box } from '@mui/material';
 import StarIcon from '@mui/icons-material/Star.js';
 import { labels, fixRating, matchHighlighter } from '../utils/utils.js';
+import { createUrl } from '../utils/urlUtils.js';
+import { errorMessage } from '../utils/errorUtils.js';
 
 export default function Result() {
     const [response, setResponse] = useState();
@@ -17,23 +19,16 @@ export default function Result() {
     const [selectedContext, setSelectedContext] = useState();
     const history = useRouter();
 
-    const errorMessage = () => {
-        messageApi.open({
-            type: 'error',
-            content: 'There was a problem with the request. Please go back and try again.',
-        });
-    };
     const fetchUrl = async (url) => {
         await axios.get(url)
             .then((response) => {
-                console.log(response.data);
                 setResponse(response.data.response);
                 setResponseHeader(response.data.responseHeader);
                 setIsLoading(false);
             })
             .catch((error) => {
                 console.error(error);
-                errorMessage();
+                errorMessage('solrError', messageApi);
                 setIsLoading(false);
             });
     };
@@ -58,14 +53,18 @@ export default function Result() {
             return;
         }
 
-        const url = `https://api.moviehut.pt/solr/${selectedContext}/select?defType=${defType}&fl=${fl}&indent=true&q.op=${q_op}&q=${q}&rows=${rows}&useParams=`;
+        const url = createUrl(selectedContext, defType, fl, q_op, q, rows);
+        if (!url) {
+            errorMessage('createUrlError', messageApi);
+            setIsLoading(false);
+            return;
+        }
 
         fetchUrl(url);
     }, []);
 
     useEffect(() => {
         if (responseHeader) {
-            console.log(responseHeader);
             setQuery(responseHeader.params.q);
         }
     }, [responseHeader]);
