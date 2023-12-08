@@ -4,221 +4,196 @@ import { useRouter } from 'next/router';
 import { DownOutlined, AudioOutlined, CloseOutlined } from '@ant-design/icons';
 import { Dropdown, Space, Input, Button, notification } from 'antd';
 import CheckboxMenu from '../components/checkBoxMenu';
+import { genres } from '../utils/utils.js';
+
 const { Search } = Input;
 const Context = React.createContext({
-  name: 'Default',
+    name: 'Default',
 });
 
 export default function Home() {
-  const [selectedContext, setSelectedContext] = useState('simple_conversations');
-  const [dropdownName, setDropdownName] = useState('Simple Context');
-  const [isSpeaking, setIsSpeaking] = useState(false);
-  const [transcript, setTranscript] = useState('');
-  const [isError, setIsError] = useState(false);
-  const [choosenGenres, setChoosenGenres] = useState([]);
-  const recognition = useRef(null);
-  const history = useRouter();
-  const [api, contextHolder] = notification.useNotification();
+    const [selectedContext, setSelectedContext] = useState('simple_conversations');
+    const [dropdownName, setDropdownName] = useState('Simple Context');
+    const [isSpeaking, setIsSpeaking] = useState(false);
+    const [transcript, setTranscript] = useState('');
+    const [isError, setIsError] = useState(false);
+    const [choosenGenres, setChoosenGenres] = useState([]);
+    const recognition = useRef(null);
+    const history = useRouter();
+    const [api, contextHolder] = notification.useNotification();
 
-  function handleContextChange(key) {
-    setSelectedContext(key);
-    setDropdownName(key === 'simple_conversations' ? 'Simple Context' : 'Complex Context');
-  };
-
-  const openNotification = (placement) => {
-    api.info({
-      message: `Error`,
-      description: (
-        <Context.Consumer>
-          {(value) => (
-            <span>You need to type or speak in order to search. No mind reader on our side🙄</span>
-          )}
-        </Context.Consumer>
-      ),
-      placement,
-    });
-  };
-
-  const handleSearch = (value, _e, info) => {
-    _e.preventDefault();
-    if (!value) {
-      // Add error handling for empty input
-      openNotification('bottomLeft');
-      setIsError(true);
-      return;
-    }
-
-    const query = {
-      search: value,
-      selectedContext: selectedContext,
-      choosenGenres: choosenGenres.join(',')
+    function handleContextChange(key) {
+        setSelectedContext(key);
+        setDropdownName(key === 'simple_conversations' ? 'Simple Context' : 'Complex Context');
     };
 
-    history.push({
-      pathname: '/result',
-      query: query,
-    });
-  };
+    const openNotification = (placement) => {
+        api.info({
+            message: `Error`,
+            description: (
+                <Context.Consumer>
+                    {(value) => (
+                        <span>You need to type or speak in order to search. No mind reader on our side🙄</span>
+                    )}
+                </Context.Consumer>
+            ),
+            placement,
+        });
+    };
 
-  const handleSpeechRecognition = () => {
-    setTranscript('');
+    const handleSearch = (value, _e, info) => {
+        _e.preventDefault();
+        if (!value) {
+            // Add error handling for empty input
+            openNotification('bottomLeft');
+            setIsError(true);
+            return;
+        }
 
-    if (!recognition.current) {
-      recognition.current = new window.webkitSpeechRecognition();
-      recognition.current.continuous = false;
-      recognition.current.interimResults = false;
-      recognition.current.lang = 'en-US';
+        const query = {
+            search: value,
+            selectedContext: selectedContext,
+            choosenGenres: choosenGenres.join(',')
+        };
 
-      recognition.current.onaudiostart = () => {
-        console.log('RECOGNITION STARTED');
-      };
+        history.push({
+            pathname: '/result',
+            query: query,
+        });
+    };
 
-      recognition.current.onaudioend = () => {
-        console.log('RECOGNITION FINISHED');
-      };
+    const handleSpeechRecognition = () => {
+        setTranscript('');
 
-      recognition.current.onend = () => {
-        console.log('RECOGNITION DISCONNECTED');
-      };
+        if (!recognition.current) {
+            recognition.current = new window.webkitSpeechRecognition();
+            recognition.current.continuous = false;
+            recognition.current.interimResults = false;
+            recognition.current.lang = 'en-US';
 
-      recognition.current.onspeechstart = () => {
-        console.log('SPEECH STARTED');
-      };
+            recognition.current.onaudiostart = () => {
+                console.log('RECOGNITION STARTED');
+            };
 
-      recognition.current.onspeechend = () => {
-        console.log('SPEECH ENDED');
-        handleStopSpeechRecognition();
-      };
+            recognition.current.onaudioend = () => {
+                console.log('RECOGNITION FINISHED');
+            };
 
-      recognition.current.onresult = (event) => {
-        console.log(event.results);
+            recognition.current.onend = () => {
+                console.log('RECOGNITION DISCONNECTED');
+            };
+
+            recognition.current.onspeechstart = () => {
+                console.log('SPEECH STARTED');
+            };
+
+            recognition.current.onspeechend = () => {
+                console.log('SPEECH ENDED');
+                handleStopSpeechRecognition();
+            };
+
+            recognition.current.onresult = (event) => {
+                console.log(event.results);
+                setIsSpeaking(false);
+                const transcript = Array.from(event.results)
+                    .map((result) => result[0])
+                    .map((result) => result.transcript)
+                    .join('');
+
+                // Update the search input value with the transcribed speech
+                setTranscript(transcript);
+            };
+        }
+
+        recognition.current.start();
+        setIsSpeaking(true);
+        console.log('Speech recognition started');
+    };
+
+    const handleStopSpeechRecognition = () => {
         setIsSpeaking(false);
-        const transcript = Array.from(event.results)
-          .map((result) => result[0])
-          .map((result) => result.transcript)
-          .join('');
-
-        // Update the search input value with the transcribed speech
-        setTranscript(transcript);
-      };
+        console.log('Speech recognition ended on click');
+        recognition.current.stop();
     }
 
-    recognition.current.start();
-    setIsSpeaking(true);
-    console.log('Speech recognition started');
-  };
+    const handleInputChange = (e) => {
+        setTranscript(e.target.value);
+    };
 
-  const handleStopSpeechRecognition = () => {
-    setIsSpeaking(false);
-    console.log('Speech recognition ended on click');
-    recognition.current.stop();
-  }
+    const items = [
+        {
+            label: 'Simple Context',
+            onClick: () => handleContextChange('simple_conversations')
+        },
+        {
+            label: 'Complex Context',
+            onClick: () => handleContextChange('complex_conversations')
+        },
+    ];
 
-  const handleInputChange = (e) => {
-    setTranscript(e.target.value);
-  };
+    const onCheckboxChange = selection => {
+        setChoosenGenres([...selection]);
+    };
 
-  const items = [
-    {
-      label: 'Simple Context',
-      onClick: () => handleContextChange('simple_conversations')
-    },
-    {
-      label: 'Complex Context',
-      onClick: () => handleContextChange('complex_conversations')
-    },
-  ];
+    const contextValue = useMemo(
+        () => ({
+            name: 'MovieHut.pt',
+        }),
+        [],
+    );
 
-  const genres = [
-    "action",
-    "adventure",
-    "music",
-    "western",
-    "sci-fi",
-    "horror",
-    "family",
-    "adult",
-    "crime",
-    "fantasy",
-    "romance",
-    "biography",
-    "film-noir",
-    "history",
-    "comedy",
-    "documentary",
-    "sport",
-    "short",
-    "musical",
-    "thriller",
-    "mystery",
-    "drama",
-    "animation",
-    "war"
-  ];
-
-  const onCheckboxChange = selection => {
-    setChoosenGenres([...selection]);
-  };
-
-  const contextValue = useMemo(
-    () => ({
-      name: 'MovieHut.pt',
-    }),
-    [],
-  );
-
-  return (
-    <Context.Provider value={contextValue}>
-      {contextHolder}
-      <div className={styles.container}>
-        <main>
-          <h1 className={styles.title}>Welcome to MovieHut.pt</h1>
-          <p className={styles.description}>The place to find any movie related information!</p>
-          <Space direction="vertical">
-            <Search
-              placeholder="Type or Press to Speak"
-              enterButton={<Button>Search</Button>}
-              size="large"
-              value={transcript || undefined}
-              suffix={
-                !isSpeaking ? (
-                  <AudioOutlined
-                    style={{
-                      fontSize: 16,
-                      color: '#1677ff',
-                      cursor: 'pointer',
-                    }}
-                    onClick={handleSpeechRecognition}
-                  />
-                ) : (
-                  <CloseOutlined
-                    style={{
-                      fontSize: 16,
-                      color: '#1677ff',
-                      cursor: 'pointer',
-                    }}
-                    onClick={handleStopSpeechRecognition}
-                  />
-                )
-              }
-              onSearch={handleSearch}
-              onChange={handleInputChange}
-              status={isError ? 'error' : undefined}
-            />
-            <div style={{ display: 'flex' }}>
-              <Dropdown menu={{ items }}>
-                <a onClick={(e) => e.preventDefault()}>
-                  <Space>
-                    {dropdownName}
-                    <DownOutlined />
-                  </Space>
-                </a>
-              </Dropdown>
-              <CheckboxMenu options={genres} onChange={onCheckboxChange} />
+    return (
+        <Context.Provider value={contextValue}>
+            {contextHolder}
+            <div className={styles.container}>
+                <main>
+                    <h1 className={styles.title}>Welcome to MovieHut.pt</h1>
+                    <p className={styles.description}>The place to find any movie related information!</p>
+                    <Space direction="vertical">
+                        <Search
+                            placeholder="Type or Press to Speak"
+                            enterButton={<Button>Search</Button>}
+                            size="large"
+                            value={transcript || undefined}
+                            suffix={
+                                !isSpeaking ? (
+                                    <AudioOutlined
+                                        style={{
+                                            fontSize: 16,
+                                            color: '#1677ff',
+                                            cursor: 'pointer',
+                                        }}
+                                        onClick={handleSpeechRecognition}
+                                    />
+                                ) : (
+                                    <CloseOutlined
+                                        style={{
+                                            fontSize: 16,
+                                            color: '#1677ff',
+                                            cursor: 'pointer',
+                                        }}
+                                        onClick={handleStopSpeechRecognition}
+                                    />
+                                )
+                            }
+                            onSearch={handleSearch}
+                            onChange={handleInputChange}
+                            status={isError ? 'error' : undefined}
+                        />
+                        <div style={{ display: 'flex' }}>
+                            <Dropdown menu={{ items }}>
+                                <a onClick={(e) => e.preventDefault()}>
+                                    <Space>
+                                        {dropdownName}
+                                        <DownOutlined />
+                                    </Space>
+                                </a>
+                            </Dropdown>
+                            <CheckboxMenu options={genres} onChange={onCheckboxChange} />
+                        </div>
+                    </Space>
+                </main>
             </div>
-          </Space>
-        </main>
-      </div>
-    </Context.Provider>
-  );
+        </Context.Provider>
+    );
 };

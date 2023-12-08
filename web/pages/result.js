@@ -1,11 +1,11 @@
 import NavBar from '../components/navbar.js';
 import { useEffect, useState } from 'react';
-import { Skeleton, message, List, Avatar, Modal } from 'antd';
+import { Skeleton, message, List, Avatar } from 'antd';
 import axios from 'axios';
 import { useRouter } from 'next/router';
 import { Rating, Box } from '@mui/material';
 import StarIcon from '@mui/icons-material/Star.js';
-import {labels, fixRating, matchHighlighter} from '../utils/utils.js';
+import { labels, fixRating, matchHighlighter } from '../utils/utils.js';
 
 export default function Result() {
     const [response, setResponse] = useState();
@@ -16,7 +16,7 @@ export default function Result() {
     const [search, setSearch] = useState();
     const [selectedContext, setSelectedContext] = useState();
     const history = useRouter();
-    
+
     const errorMessage = () => {
         messageApi.open({
             type: 'error',
@@ -70,29 +70,8 @@ export default function Result() {
         }
     }, [responseHeader]);
 
-    const showModal = (item) => {
-        Modal.info({
-            title: item.movie,
-            content: (
-                <div>
-                    <img src={"https://picsum.photos/200"} alt={item.movie} style={{ marginBottom: '10px' }} />
-                    <p><b>Release Year:</b> {item.year}</p>
-                    <p><b>Characters involved:</b> {item.characters.join(', ')}</p>
-                    <p><b>Movie genres:</b> {item.genres.join(', ')}</p>
-                    <p><b>Transcript:</b> <span dangerouslySetInnerHTML={{ __html: matchHighlighter(item.transcript) }}></span></p>
-                </div>
-            ),
-            closable: true,
-            maskClosable: true,
-            okText: 'Close',
-            width: '50vw',
-            centered: true,
-            okButtonProps: { style: { display: 'none' } },
-        });
-    }
-
     const redirectToConversationPage = (id) => {
-        history.push('/conversation?id=' + id + '&selectedContext=' + selectedContext);
+        history.push('/conversation?id=' + id + '&selectedContext=' + selectedContext + '&search=' + search);
     };
 
     return (
