@@ -1,0 +1,231 @@
+{
+    "add-field-type" : [
+        {
+            "name": "NameTextField",
+            "class" : "solr.TextField",
+            "indexAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"}
+                ]
+            },
+            "queryAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"}
+                ]
+            }
+        },
+        {
+            "name": "GenericTextField",
+            "class": "solr.TextField",
+            "indexAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class": "solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class": "solr.LowerCaseFilterFactory"}
+                ]
+            },
+            "queryAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"}
+                ]
+            }
+        },
+        {
+            "name": "GenericIntegerField",
+            "class": "solr.TrieIntField",
+            "precisionStep": 8
+
+        },
+        {
+            "name": "conversationVector",
+            "class": "solr.DenseVectorField",
+            "vectorDimension": 384,
+            "similarityFunction": "cosine",
+            "knnAlgorithm": "hnsw"
+        },
+        {
+            "name": "GenericFloatField",
+            "class": "solr.TrieFloatField",
+            "precisionStep": 8
+
+        },
+        {
+            "name": "text_tfidf",
+            "class": "solr.TextField",
+            "positionIncrementGap": "100",
+            "indexAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class": "solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class": "solr.LowerCaseFilterFactory"}
+                ]
+            },
+            "queryAnalyzer" : {
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class": "solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class": "solr.LowerCaseFilterFactory"}
+                ]
+            },
+            "similarity": {
+                "class" : "solr.ClassicSimilarityFactory"
+            }
+
+        }
+    ],
+    
+    "add-field": [
+        {
+            "name": "characters",
+            "type": "NameTextField",
+            "multiValued": true,
+            "indexed": true,
+            "required": false,
+            "stored": true
+        },
+        {
+            "name": "character",
+            "type": "NameTextField",
+            "indexed": true,
+            "stored": true,
+            "multiValued": false,
+            "required": false
+        },
+        {
+            "name": "actors",
+            "type": "NameTextField",
+            "indexed": true,
+            "stored": true,
+            "multiValued": true,
+            "required": false
+        },
+        {
+            "name": "actor",
+            "type": "NameTextField",
+            "indexed": true,
+            "stored": true,
+            "multiValued": false,
+            "required": false
+        },
+        {
+            "name": "genres",
+            "type": "GenericTextField",
+            "indexed": true,
+            "stored": true,
+            "multiValued": true,
+            "required": false
+        },
+        {
+            "name": "movie",
+            "type": "GenericTextField",
+            "indexed": true,
+            "stored": true,
+            "multiValued": false,
+            "required": false
+        },
+        {
+            "name": "revenue",
+            "type": "GenericIntegerField",
+            "indexed": false,
+            "stored": true,
+            "multiValued": false,
+            "required": false
+        },
+
+        {
+            "name": "runtime",
+            "type": "GenericIntegerField",
+            "indexed": false,
+            "stored": true,
+            "multiValued": false,
+            "required": false
+        },
+
+        {
+            "name": "imdb_rating",
+            "type": "GenericFloatField",
+            "indexed": true,
+            "stored": true,
+            "multiValued": false,
+            "required": false
+        },
+        
+        {
+            "name": "imdb_votes",
+            "type": "GenericIntegerField",
+            "indexed": true,
+            "stored": true,
+            "multiValued": false,
+            "required": false
+        },
+        {
+            "name": "text",
+            "type": "GenericTextField",
+            "indexed": true,
+            "stored": true,
+            "multiValued": false,
+            "required": false
+        },
+        {
+            "name": "transcript",
+            "type": "GenericTextField",
+            "indexed": true,
+            "stored": true,
+            "multiValued": false,
+            "required": false
+        },
+        {
+            "name": "content_type",
+            "type": "string",
+            "indexed": true,
+            "stored": true,
+            "multiValued": false,
+            "required": false
+        },
+        {
+            "name": "year",
+            "type": "GenericIntegerField",
+            "indexed": true,
+            "stored": true,
+            "multiValued": false,
+            "required": false
+        },
+        {
+            "name": "vector",
+            "type": "conversationVector",
+            "indexed": true,
+            "stored": true
+        },
+        {
+            "name": "transcript_tfidf",
+            "type": "text_tfidf",
+            "indexed": true,
+            "stored": false,
+            "multiValued": true
+        }
+    ],
+    "add-copy-field" : [ 
+        {
+        "source" : "transcript",
+        "dest" : "transcript_tfidf"
+        } 
+    ]
+}
