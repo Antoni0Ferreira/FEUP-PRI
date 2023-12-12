@@ -128,7 +128,7 @@
         {
             "name": "imdb_rating",
             "type": "GenericFloatField",
-            "indexed": false,
+            "indexed": true,
             "stored": true,
             "multiValued": false,
             "required": false
@@ -137,23 +137,7 @@
         {
             "name": "imdb_votes",
             "type": "GenericIntegerField",
-            "indexed": false,
-            "stored": true,
-            "multiValued": false,
-            "required": false
-        },
-        {
-            "name": "previous_dialogue",
-            "type": "GenericIntegerField",
-            "indexed": false,
-            "stored": true,
-            "multiValued": false,
-            "required": false
-        },
-        {
-            "name": "next_dialogue",
-            "type": "GenericIntegerField",
-            "indexed": false,
+            "indexed": true,
             "stored": true,
             "multiValued": false,
             "required": false

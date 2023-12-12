@@ -25,9 +25,31 @@
                 },
                 "filters":[
                     {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
-                    {"class":"solr.LowerCaseFilterFactory"},
-                    {"class":"solr.SynonymGraphFilterFactory",  "ignoreCase":"true", "synonyms":"namesynonyms.txt", "expand":true},
-                    {"class":"solr.FlattenGraphFilterFactory"}
+                    {"class":"solr.LowerCaseFilterFactory"}
+                ]
+            }
+        },
+        {
+            "name":"SynonymsNameTextField",
+            "class":"solr.TextField",
+            "indexAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.SynonymGraphFilterFactory",  "ignoreCase":"true", "synonyms":"namesynonyms.txt", "expand":"false"},
+                    {"class":"solr.FlattenGraphFilterFactory"},
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"}
+                ]
+            },
+            "queryAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"}
                 ]
             }
         },
@@ -60,6 +82,13 @@
             "required": false,
             "stored": true
         },
+        {
+            "name": "characters_synonyms",
+            "type": "SynonymsNameTextField",
+            "multiValued": true,
+            "indexed": true,
+            "stored": false
+        },
 
         {
             "name": "character",
@@ -77,6 +106,13 @@
             "stored": true,
             "multiValued": true,
             "required": false
+        },
+        {
+            "name": "actors_synonyms",
+            "type": "SynonymsNameTextField",
+            "multiValued": true,
+            "indexed": true,
+            "stored": false
         },
 
         {
@@ -135,7 +171,7 @@
         {
             "name": "imdb_votes",
             "type": "GenericIntegerField",
-            "indexed": false,
+            "indexed": true,
             "stored": true,
             "multiValued": false,
             "required": false
@@ -195,6 +231,17 @@
             "type": "conversationVector",
             "indexed": true,
             "stored": true
+        }
+    ],
+
+    "add-copy-field": [
+        {
+            "source": "characters",
+            "dest": "characters_synonyms"
+        },
+        {
+            "source": "actors",
+            "dest": "actors_synonyms"
         }
     ]
 }

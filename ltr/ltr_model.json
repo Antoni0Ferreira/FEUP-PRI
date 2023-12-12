@@ -1,0 +1,16 @@
+{
+    "class" : "org.apache.solr.ltr.model.LinearModel",
+    "name" : "myModel",
+    "features" : [
+      { "name" : "imdbVotesCount" },
+      { "name" : "imdbRating" },
+      { "name" : "originalScore" }
+    ],
+    "params" : {
+      "weights" : {
+        "imdbVotesCount" : 0.0,
+        "imdbRating" : 0.0,
+        "originalScore" : 1.0
+      }
+    }
+  }

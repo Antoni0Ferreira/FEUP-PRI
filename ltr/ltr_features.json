@@ -1,0 +1,21 @@
+[
+    {
+        "name" : "imdbVotesCount",
+        "class" : "org.apache.solr.ltr.feature.SolrFeature",
+        "params" : {
+        "q" : "{!func}scale(imdb_votes,0,1)"
+      }
+    },
+    {
+        "name": "imdbRating",
+        "class": "org.apache.solr.ltr.feature.SolrFeature",
+        "params": {
+            "q": "{!func}scale(imdb_rating,0,1)"
+        }
+    },
+    {
+        "name" : "originalScore",
+        "class" : "org.apache.solr.ltr.feature.OriginalScoreFeature",
+        "params" : {}
+    }
+]
