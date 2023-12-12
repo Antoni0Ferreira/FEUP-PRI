@@ -1,6 +1,6 @@
 import NavBar from '../components/navbar.js';
 import { useEffect, useState } from 'react';
-import { Skeleton, message, List, Avatar } from 'antd';
+import { Skeleton, message, List, Avatar, Slider } from 'antd';
 import axios from 'axios';
 import { useRouter } from 'next/router';
 import { Rating, Box } from '@mui/material';
@@ -11,18 +11,21 @@ import { errorMessage } from '../utils/errorUtils.js';
 
 export default function Result() {
     const [response, setResponse] = useState();
+    const [responseAll, setResponseAll] = useState();
     const [responseHeader, setResponseHeader] = useState();
     const [query, setQuery] = useState();
     const [isLoading, setIsLoading] = useState(true);
     const [messageApi, contextHolder] = message.useMessage();
     const [search, setSearch] = useState();
     const [selectedContext, setSelectedContext] = useState();
+    const [years, setYears] = useState([1960, 2020]);
     const history = useRouter();
 
     const fetchUrl = async (url) => {
         await axios.get(url)
             .then((response) => {
                 setResponse(response.data.response);
+                setResponseAll(response.data.response);
                 setResponseHeader(response.data.responseHeader);
                 setIsLoading(false);
             })
@@ -73,6 +76,18 @@ export default function Result() {
         history.push('/conversation?id=' + id + '&selectedContext=' + selectedContext + '&search=' + search);
     };
 
+    const filterByYear = (item) => {
+        const year = item.year;
+        return year >= years[0] && year <= years[1];
+    };
+
+    const onChange = (value) => {
+        setYears(value);
+        const filteredResponse = responseAll.docs.filter(filterByYear);
+        setResponse({ numFound: filteredResponse.length, docs: filteredResponse });
+        
+    };
+
     return (
         <>
             {contextHolder}
@@ -88,7 +103,20 @@ export default function Result() {
                 {isLoading && <Skeleton active />}
                 {!isLoading && response && (
                     <div>
+                        <div style={{ display: 'flex', alignItems: 'center' }}>
                         <p style={{ margin: '0 20px' }}>Found {response.numFound} results</p>
+                        <Slider
+                            range={{ draggableTrack: true }}
+                            min={1950}
+                            max={2023}
+                            step={1}
+                            defaultValue={years}
+                            onChange={onChange}
+                            style={{ flex: 1 }}
+                        />
+                        <p style={{margin: '0 10px 0 10px'}}>{'Filtering from ' + years[0] + ' to ' + years[1]}</p>
+                    </div>
+
                         <List
                             itemLayout="horizontal"
                             style={{ margin: '0 20px' }}
