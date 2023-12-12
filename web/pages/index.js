@@ -5,6 +5,7 @@ import { DownOutlined, AudioOutlined, CloseOutlined } from '@ant-design/icons';
 import { Dropdown, Space, Input, Button, notification } from 'antd';
 import CheckboxMenu from '../components/checkBoxMenu';
 import { genres } from '../utils/utils.js';
+import Footer from '../components/footer';
 
 const { Search } = Input;
 const Context = React.createContext({
@@ -194,6 +195,7 @@ export default function Home() {
                     </Space>
                 </main>
             </div>
+        <Footer />
         </Context.Provider>
     );
 };

@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }) {
         <AppLayout>
             <>
                 <Component {...pageProps} />
-                {Component && <Footer />}
+                {Component}
             </>
         </AppLayout>
     );
