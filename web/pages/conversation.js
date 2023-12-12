@@ -87,7 +87,7 @@ export default function Conversation() {
                         <div style={{ textAlign: 'right', marginRight: '30px' }}>
                             <Image
                                 width={300}
-                                src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
+                                src={item.poster_path}
                                 alt="Movie Poster"
                                 style={{ borderRadius: '8px', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)' }}
                             />
@@ -99,13 +99,13 @@ export default function Conversation() {
                             <p><b>Characters involved:</b> {item.characters.join(", ")}</p>
                             <p><b>Genres:</b> {item.genres.join(", ")}</p>
                             <p><b>Duration:</b> {item.runtime} minutes</p>
-                            <p><b>Rating:</b> <Rating style={{ marginTop: '5px' }} name="read-only" value={labels[fixRating(item.imdb_rating)]} precision={0.5} readOnly emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />} /></p>
-                            <p><b>Votes:</b>{item.imdb_votes}</p>
-
+                            <p><b>Rating:</b> <Rating style={{ marginTop: '5px' }} name="read-only" value={fixRating(item.imdb_rating)} precision={0.5} readOnly emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />} /></p>
+                            <p><b>Votes:</b> {item.imdb_votes.toLocaleString()}</p>
+                            {item.revenue > 0 && <p><b>Revenue:</b> ${item.revenue.toLocaleString()}</p>}
                         </div>
                     </div>
                     <div style={{ textAlign: 'justify', marginLeft: '30px' }}>
-                        {item.lines.map((line, index) => (
+                        {item.lines.reverse().map((line, index) => (
                             <div key={index} style={{ margin: '10px 0' }}>
                                 <p>
                                     <b>{line.character}</b>{": "}
@@ -123,4 +123,4 @@ export default function Conversation() {
         </>
     );
 
-}
+    }

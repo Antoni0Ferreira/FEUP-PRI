@@ -94,7 +94,7 @@ export default function Result() {
             <div>
                 <NavBar />
                 {!response ? (
-                    <p>No query. Go back to the <a href="/" className='link'>homepage</a> to search.</p>
+                    <p style={{margin: '10px'}}>No query. Go back to the <a href="/" className='link'>homepage</a> to search.</p>
                 ) : (
                     <div>
                         <p style={{ margin: '10px 0px 0px 20px' }}>Searching for {query}</p>
@@ -104,7 +104,7 @@ export default function Result() {
                 {!isLoading && response && (
                     <div>
                         <div style={{ display: 'flex', alignItems: 'center' }}>
-                        <p style={{ margin: '0 20px' }}>Found {response.numFound} results</p>
+                        <p style={{ margin: '0 20px' }}>Found {response.docs.length} results</p>
                         <Slider
                             range={{ draggableTrack: true }}
                             min={1950}
@@ -131,15 +131,15 @@ export default function Result() {
 
                                 <List.Item>
                                     <List.Item.Meta
-                                        avatar={<Avatar src={"https://picsum.photos/200"} />}
+                                        avatar={<Avatar src={item.poster_path[0]} />}
                                         title={<a>{item.movie}</a>}
-                                        description={<span dangerouslySetInnerHTML={{ __html: item.lines[0].character + ': ' + matchHighlighter(item.lines[0].text, search) }}></span>}
+                                        description={<span dangerouslySetInnerHTML={{ __html: item.lines[item.lines.length-1].character + ': ' + matchHighlighter(item.lines[item.lines.length-1].text, search) }}></span>}
                                         onClick={() => redirectToConversationPage(item.id)}
                                         onMouseEnter={() => { document.body.style.cursor = 'pointer'; }}
                                         onMouseLeave={() => { document.body.style.cursor = 'default'; }}
                                     />
-                                    <Rating name="read-only" value={fixRating(6)} precision={0.5} readOnly emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />} />
-                                    <Box sx={{ ml: 2 }}>{labels[fixRating(6)]}</Box>
+                                    <Rating name="read-only" value={fixRating(item.imdb_rating)} precision={0.5} readOnly emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />} />
+                                    <Box sx={{ ml: 2 }}>{labels[fixRating(item.imdb_rating)]}</Box>
                                 </List.Item>
                             )}
                         />
