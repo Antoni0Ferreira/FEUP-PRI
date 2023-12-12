@@ -63,7 +63,7 @@ export default function Conversation() {
     return (
         <>
             <NavBar />
-            {!item ? (
+            {!item && !isLoading? (
                 <p style={{ marginTop: '10px', color: '#555', textAlign: 'center' }}>
                     Oops! No results found. Head back to the{" "}
                     <a href="/" className="link" style={{ color: '#007bff', textDecoration: 'none' }}>
